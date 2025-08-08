@@ -1,0 +1,21 @@
+{
+    "full": {
+
+    },
+	"multiword": {
+
+  	},
+    "start": {
+    "th": "d"
+    },
+    "end": {
+      "s": "z"
+    },
+    "syllable": {
+     "j": "dzh",
+     "f": "v",
+      "o": "oe",
+      "u": "oo",
+    "ie": "ee"
+    }
+}

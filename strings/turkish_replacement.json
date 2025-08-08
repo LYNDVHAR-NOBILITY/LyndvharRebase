@@ -1,0 +1,25 @@
+{
+    "full": {
+		"hello ": "merhaba"
+    },
+	"multiword": {
+    "good morning": "gu daynin",
+    "what is your name": "adiniz ne",
+    "thank you": "elinize saglik",
+    "you're welcome": "rica ederim"
+  	},
+    "start": {
+		"qu": "ku'",
+      "th": "d",
+      "j": "dj",
+      "ch": "tsh"
+    },
+    "end": {
+      "e": "u",
+      "ing": "ink"
+    },
+    "syllable": {
+	"w": "v",
+      "u": "a"
+    }
+}

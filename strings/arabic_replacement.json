@@ -1,0 +1,43 @@
+{
+    "full": {
+		"the ": "al-",
+      "yes": "naam",
+      "laa": "no",
+      "please": "min fadlik",
+      "hello": "s'alaam",
+      "peace": "s'alaam",
+      "what?": "madhaa taquul?"
+    },
+	"multiword": {
+    "be with you": "alayyqum",
+    "thank you": "jukran",
+    "you're welcome": "aafwan",
+    "excuse me": "alaafw",
+    "I am sorry": "arjuu almaadhira",
+    "good morning": "sabaah alkhayr",
+    "good evening": "masaa' alkhayr",
+    "good night": "tusbhih aalaah khayr",
+    "what is your name?": "maa ismuk?",
+    "how are you": "kayfa haluk",
+    "I'm fine": "anaa bihkayr jukran",
+    "I am fine": "anaa bikhayr jukran"
+  	},
+    "start": {
+		"q": "q'",
+		"k": "q"
+    },
+    "end": {
+      "a": "ah",
+      "e": "eh",
+      "o": "oh",
+	 "k": "kh",
+    "d": "dh",
+    "b": "bh"
+    },
+    "syllable": {
+	"th": "s",
+    "r": "rr",
+	"j": "jj",
+    "sh": "jh"
+    }
+}
