@@ -1,10 +1,17 @@
 {
     "full": {
+        "yes": "da",
+        "no": "nett",
+        "do": "delat",
+        "spear": "copieu",
+        "vagrant": "brodyaga",
+        "noble": "blagorodny",
+        "knight": "rytsar",
+        "church": "tserkov"
+    },
+    "multiword": {
 
     },
-	"multiword": {
-
-	},
     "start": {
 
     },
@@ -12,15 +19,5 @@
 
     },
     "syllable": {
-		"c": "k",
-		"kh": "ch",
-		"d": "Д",
-		"h": "н",
-		"t": "т",
-		"u": "ц",
-		"k": "к",
-		"w": "ш",
-		"r": "я",
-		"e": "э"
     }
 }
