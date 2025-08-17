@@ -42,6 +42,7 @@ GLOBAL_VAR(string_filename_current_key)
 
 	if(fexists("[directory]/[filename]"))
 		GLOB.string_cache[filename] = json_load("[directory]/[filename]")
+	else
 		if (convert_HTML)
 			if ("full" in GLOB.string_cache[filename])
 				GLOB.string_cache[filename]["full"] = special_chars_to_html_tags(GLOB.string_cache[filename]["full"])

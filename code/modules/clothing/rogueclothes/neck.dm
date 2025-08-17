@@ -557,6 +557,11 @@
 	icon_state = "undivided_s"
 	sellprice = 50
 
+/obj/item/clothing/neck/roguetown/psicross/undivided
+	name = "amulet of Ten"
+	desc = "The Ten eternal, strength in unity. Stalwart for centuries against the darkness."
+	icon_state = "undivided"
+
 /obj/item/clothing/neck/roguetown/psicross/astrata
 	name = "amulet of Astrata"
 	desc = "As sure as the sun rises, tomorrow will come."
