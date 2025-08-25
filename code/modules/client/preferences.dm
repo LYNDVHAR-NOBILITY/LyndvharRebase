@@ -1844,11 +1844,13 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						/datum/language/draconic,
 						/datum/language/celestial,
 						/datum/language/grenzelhoftian,
-						/datum/language/kazengunese,
 						/datum/language/calmirixian,
 						/datum/language/rhaenish,
+						/datum/language/saltlian,
 						/datum/language/valorian,
-						/datum/language/aavnic
+						/datum/language/kargradi,
+						/datum/language/forvheipan,
+						/datum/language/zybanti
 					)
 					var/list/choices = list("None")
 					for(var/language in selectable_languages)

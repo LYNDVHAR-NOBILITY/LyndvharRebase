@@ -20,14 +20,11 @@
 		/datum/language/draconic,
 		/datum/language/thievescant,
 		/datum/language/grenzelhoftian,
-		/datum/language/kazengunese,
 		/datum/language/valorian,
-		/datum/language/calmirixian,
-		/datum/language/rhaenish,
-		/datum/language/aavnic,
-		/datum/language/undead,
-		/datum/language/abyssal,
-		/datum/language/lyndhardtian
+		/datum/language/rhaenvalian,
+		/datum/language/kargradi,
+		/datum/language/forvheipan,
+		/datum/language/zybanti
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)

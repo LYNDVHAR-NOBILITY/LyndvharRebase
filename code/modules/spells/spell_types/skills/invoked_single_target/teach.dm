@@ -1,3 +1,81 @@
+/datum/job/roguetown/archivist
+	title = "Archivist"
+	tutorial = "Your craft is knowledge- the meticulous preservation and organization of ancient scrolls and tomes, safeguarding the collective knowledge of older folk for generations to come. Nobles and peasants alike often seek your expertise on matters of history and fact, and your keenly-kept records on the events of this week will likely stand a testament to your Viscount's benevolence and their city's prosperity...or not. After all, you hold the true power: The power to dictate how the future generations will look back on these coming days."
+	flag = ARCHIVIST
+	department_flag = YEOMEN
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
+	allowed_races = RACES_SHUNNED_UP
+	allowed_ages = ALL_AGES_LIST
+	cmode_music = 'sound/music/cmode/towner/combat_towner3.ogg'
+	
+	outfit = /datum/outfit/job/roguetown/archivist
+	display_order = JDO_ARCHIVIST
+	give_bank_account = 15
+	min_pq = 1
+	max_pq = null
+	round_contrib_points = 3
+
+/datum/outfit/job/roguetown/archivist/pre_equip(mob/living/carbon/human/H)
+	..()
+	if(should_wear_femme_clothes(H))
+		shirt = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
+		pants = /obj/item/clothing/under/roguetown/tights/stockings/black
+		head  = /obj/item/clothing/head/roguetown/roguehood/black
+	else
+		shirt = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
+		pants = /obj/item/clothing/under/roguetown/tights/black
+		head = /obj/item/clothing/head/roguetown/nightman
+	backr = /obj/item/storage/backpack/rogue/satchel/short
+	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
+	beltl = /obj/item/storage/keyring/archivist
+	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
+	mask = /obj/item/clothing/mask/rogue/spectacles
+	backpack_contents = list(
+		/obj/item/recipe_book/alchemy
+	)
+
+	H.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/alchemy, 6, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
+	H.grant_language(/datum/language/elvish)
+	H.grant_language(/datum/language/dwarvish)
+	H.grant_language(/datum/language/celestial)
+	H.grant_language(/datum/language/hellspeak)
+	H.grant_language(/datum/language/orcish)
+	H.grant_language(/datum/language/grenzelhoftian)
+	H.grant_language(/datum/language/valorian)
+	H.grant_language(/datum/language/rhaenvalian)
+	H.grant_language(/datum/language/saltlian)
+	H.grant_language(/datum/language/draconic)
+	H.grant_language(/datum/language/kargradi)
+	H.grant_language(/datum/language/forvheipan)
+	H.grant_language(/datum/language/zybanti)  // All but beast, which is associated with werewolves.
+	ADD_TRAIT(H, TRAIT_SEEPRICES_SHITTY, "[type]")
+	ADD_TRAIT(H, TRAIT_INTELLECTUAL, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ARCYNE_T2, TRAIT_GENERIC)
+	H.change_stat("strength", -1)
+	H.change_stat("constitution", -1)
+	H.change_stat("intelligence", 4)
+	if(H.mind)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/teach)
+		H.mind?.adjust_spellpoints(12)
+	if(H.age == AGE_OLD)
+		H.change_stat("speed", -1)
+		H.change_stat("intelligence", 1)
+
+
 //A spell to teach other characters new skills
 /obj/effect/proc_holder/spell/invoked/teach
 	name = "The Tutor's Calling"
@@ -69,9 +147,16 @@
 	/datum/language/grenzelhoftian,
 	/datum/language/rhaenish,
 	/datum/language/hellspeak,
-	/datum/language/kazengunese,
 	/datum/language/orcish,
-	/datum/language/valorian
+	/datum/language/valorian,
+	/datum/language/rhaenvalian,
+	/datum/language/saltlian,
+	/datum/language/draconic,
+	/datum/language/kargradi,
+	/datum/language/forvheipan,
+	/datum/language/zybanti
+
+
     )
 	for(var/i = 1, i <= skill_choices.len, i++)
 		var/datum/skill/learn_item = skill_choices[i]
