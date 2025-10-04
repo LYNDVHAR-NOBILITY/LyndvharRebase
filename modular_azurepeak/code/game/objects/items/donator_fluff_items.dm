@@ -1,5 +1,5 @@
 //Lazily shoving all donator fluff items in here for now. Feel free to make this a sub-folder or something, I think it's just easier to keep a list here and just modify as needed.
-
+//keeping all of this in here to prevent parity conflicts
 //Plexiant's donator item - rapier
 /obj/item/rogueweapon/sword/rapier/aliseo
 	name = "Rapier di Aliseo"
@@ -55,10 +55,10 @@
 	icon = 'modular_azurepeak/icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'modular_azurepeak/icons/clothing/onmob/donor_clothes.dmi'
 
-//Zydras donator item - merchant dress
-/obj/item/clothing/suit/roguetown/shirt/dress/silkydress/zydrasdress //Recolored silky dress
+//Repurposed donor content
+/obj/item/clothing/suit/roguetown/shirt/dress/silkydress/nitemaster //Recolored silky dress
 	name = "Gold-Black silky dress"
-	desc = "A gorgeous black and gold dress. It seems the padding was removed."
+	desc = "A gorgeous black and gold dress."
 	icon_state = "zydrasdress"
 	item_state = "zydrasdress"
 	sleevetype = "zydrasdress"
