@@ -35,6 +35,10 @@
 	/// The bed (if) we're occupying, update on starting an action
 	var/obj/structure/bed/rogue/bed = null
 	var/target_on_bed = FALSE
+	/// The table/pillory (if) target is lying/latching on, update on starting an action
+	var/obj/structure/table_or_pillory = null
+	/// The bush (if) we're on top of, update on starting an action
+	var/obj/structure/flora/roguegrass/grassy_knoll = null
 	/// If this person has a collar that rings on
 	var/collar_bell_user = FALSE
 	var/collar_bell_target = FALSE
@@ -72,6 +76,8 @@
 	user = null
 	target = null
 	bed = null
+	table_or_pillory = null
+	grassy_knoll = null
 	collar_bell_user = FALSE
 	collar_bell_target = FALSE
 	if(knotted_status)
@@ -104,7 +110,7 @@
 	animate(user, pixel_x = target_x, pixel_y = target_y, time = time)
 	animate(pixel_x = oldx, pixel_y = oldy, time = time)
 	if(bed && force > SEX_FORCE_MID)
-		if (!istype(bed) || QDELETED(bed))
+		if(!istype(bed) || QDELETED(bed))
 			bed = null
 			target_on_bed = FALSE
 			return
@@ -119,6 +125,25 @@
 			animate(target, pixel_y = target_y, time = time)
 			animate(pixel_y = oldy, time = time)
 		bed.damage_bed(force > SEX_FORCE_HIGH ? 0.5 : 0.25)
+	else if(table_or_pillory && target && force > SEX_FORCE_MID)
+		if(!istype(table_or_pillory) || QDELETED(table_or_pillory))
+			table_or_pillory = null
+			return
+		oldy = table_or_pillory.pixel_y
+		target_y = oldy-1
+		time /= 2
+		animate(table_or_pillory, pixel_y = target_y, time = time)
+		animate(pixel_y = oldy, time = time)
+		oldy = target.pixel_y
+		target_y = oldy-1
+		animate(target, pixel_y = target_y, time = time)
+		animate(pixel_y = oldy, time = time)
+		playsound(table_or_pillory, pick(list('sound/misc/mat/table (1).ogg','sound/misc/mat/table (2).ogg','sound/misc/mat/table (3).ogg','sound/misc/mat/table (4).ogg')), 30, TRUE, ignore_walls = FALSE)
+	else if(grassy_knoll)
+		if(!istype(grassy_knoll) || QDELETED(grassy_knoll))
+			grassy_knoll = null
+			return
+		SEND_SIGNAL(grassy_knoll, COMSIG_MOVABLE_CROSSED, user)
 	
 	if((collar_bell_user || collar_bell_target) && (force > SEX_FORCE_MID))
 		playsound(collar_bell_target && target ? target : user, SFX_COLLARJINGLE, 50, TRUE, ignore_walls = FALSE)
@@ -141,6 +166,8 @@
 		broken_percentage = 100
 	else
 		playsound(src, pick(list('sound/misc/mat/bed squeak (1).ogg','sound/misc/mat/bed squeak (2).ogg','sound/misc/mat/bed squeak (3).ogg')), 30, TRUE, ignore_walls = FALSE)
+		if(broken_percentage > 10)
+			playsound(src, 'sound/misc/mat/bed damage.ogg', broken_percentage>>2, TRUE, ignore_walls = FALSE)
 
 /datum/sex_controller/proc/is_spent()
 	if(charge < CHARGE_FOR_CLIMAX)
@@ -729,6 +756,8 @@
 	current_action = null
 	bed = null
 	target_on_bed = FALSE
+	table_or_pillory = null
+	grassy_knoll = null
 	collar_bell_user = FALSE
 	collar_bell_target = FALSE
 	using_zones = list()
@@ -750,6 +779,8 @@
 	current_action = action_type
 	bed = null
 	target_on_bed = FALSE
+	table_or_pillory = null
+	grassy_knoll = null
 	collar_bell_user = FALSE
 	collar_bell_target = FALSE
 	var/datum/sex_action/action = SEX_ACTION(current_action)
@@ -762,7 +793,8 @@
 	var/datum/sex_action/action = SEX_ACTION(current_action)
 	show_progress = 1
 	action.on_start(user, target)
-	find_occupying_bed()
+	find_occupying_furniture()
+	find_occupying_grass()
 	while(TRUE)
 		if(!isnull(target.client) && target.client.prefs.sexable == FALSE) //Vrell - Needs changed to let me test sex mechanics solo
 			break
@@ -797,14 +829,27 @@
 		return FALSE
 	return TRUE
 
-/datum/sex_controller/proc/find_occupying_bed()
+/datum/sex_controller/proc/find_occupying_furniture()
 	if(bed)
 		return
-	if(target && !(target.mobility_flags & MOBILITY_STAND) && isturf(target.loc)) // find target's bed
-		bed = locate() in target.loc
-		target_on_bed = TRUE
+	if(target && isturf(target.loc)) // find target's bed/table
+		if(!(target.mobility_flags & MOBILITY_STAND)) // if target is lying down
+			bed = locate() in target.loc
+			target_on_bed = TRUE
+			if(!bed) // bed not found, try finding a table
+				var/obj/structure/table/wood/table = locate() in target.loc
+				table_or_pillory = table
+		else // target standing up, check for pillory
+			var/obj/structure/pillory/pillory = locate() in target.loc
+			table_or_pillory = pillory
 	if(!bed && !(user.mobility_flags & MOBILITY_STAND) && isturf(user.loc)) // find our bed
 		bed = locate() in user.loc
+
+/datum/sex_controller/proc/find_occupying_grass()
+	if(grassy_knoll)
+		return
+	if(isturf(user.loc)) // find our grass
+		grassy_knoll = locate() in user.loc
 
 /datum/sex_controller/proc/find_ringing_collar()
 	var/obj/item/clothing/neck/roguetown/collar/collar
