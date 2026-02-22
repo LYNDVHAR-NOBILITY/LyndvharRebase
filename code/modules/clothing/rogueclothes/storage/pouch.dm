@@ -94,7 +94,7 @@
 //Special pouch for merchants / stewards, holds a lot of coin stacks but nothing else.
 /obj/item/storage/belt/rogue/pouch/merchant
 	name = "merchant pouch"
-	desc = "A small sack with a drawstring that allows it to be worn around the neck. Or at the hips, provided you have a belt. Specifically constructed by the Guild to carry mammon efficiently; and nothing else."
+	desc = "A small sack with a drawstring that allows it to be worn around the neck. Or at the hips, provided you have a belt. Specifically constructed by the Guild to carry mammon efficiently, and nothing else."
 	icon_state = "pouch_merchant"
 	item_state = "pouch_merchant"
 	sellprice = 50

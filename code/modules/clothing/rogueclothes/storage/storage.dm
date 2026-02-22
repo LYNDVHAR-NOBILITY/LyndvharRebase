@@ -192,7 +192,7 @@
 
 /obj/item/storage/backpack/rogue/satchel/valorian
 	name = "valorian leather satchel"
-	desc = "A made to last leather bag from the Psydonian heart of Valoria."
+	desc = "A made to last leather bag from the Psydonians of Valoria."
 	icon_state = "osatchel"
 	item_state = "osatchel"
 

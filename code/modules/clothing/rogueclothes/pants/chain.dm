@@ -130,7 +130,7 @@
 
 /obj/item/clothing/under/roguetown/chainlegs/kilt/paalloy
 	name = "ancient chain kilt"
-	desc = "Polished gilbranze rings, linked together with bindings of silk to form a waist's vestment. These undying legionnaires once marched for Vheslyn, and again for Zizo; but now, they are utterly beholden to the whims of their resurrector."
+	desc = "Polished gilbranze rings, linked together with bindings of silk to form a waist's vestment. These undying legionnaires once marched for their lord, and again for Zizo; but now, they are utterly beholden to the whims of their resurrector."
 	icon_state = "achainkilt"
 	smeltresult = /obj/item/ingot/aaslag
 

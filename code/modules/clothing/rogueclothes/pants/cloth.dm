@@ -54,7 +54,7 @@
 
 /obj/item/clothing/under/roguetown/tights/explorerpants
 	name = "explorer's pants"
-	desc = "Practical and modest, you hope that it will survive the next cavedive."
+	desc = "Practical and modest, hopefully that practicality extends to the next cavedive."
 	icon_state = "explorerpants"
 	item_state = "explorerpants"
 

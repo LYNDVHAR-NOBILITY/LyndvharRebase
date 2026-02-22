@@ -1,7 +1,6 @@
 /obj/item/clothing/under/roguetown/heavy_leather_pants
 	name = "hardened leather trousers"
-	desc = "Thick hide cut and sewn into a pair of very protective trousers. The dense leather can \
-	turn away errant chops."
+	desc = "Thick hide cut and sewn into a pair of very protective trousers. The dense leather can turn away errant chops."
 	gender = PLURAL
 	icon_state = "roguepants"
 	item_state = "roguepants"
@@ -23,8 +22,7 @@
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/shorts
 	name = "hardened leather shorts"
-	desc = "A thick hide pair of shorts, favored by some for their ease of motion in spite of \
-	being less protective than full trousers."
+	desc = "A thick hide pair of shorts, favored by some for their ease of motion in spite of being less protective than full trousers."
 	icon_state = "rogueshorts"
 	item_state = "rogueshorts"
 	body_parts_covered = GROIN
@@ -33,7 +31,7 @@
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/valorian
 	name = "valorian leather trousers"
-	desc = "padded leather armor made by Valorian tailors, its quality is remarkable."
+	desc = "Padded leather armor made by Valorian tailors, its quality is remarkable."
 	icon_state = "fencerpants"
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/valorian/shepherd
@@ -44,7 +42,7 @@
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/valorian/generic
 	name = "fencing breeches"
-	desc = "A pair of loose breeches with leather reinforcements on the waist and legs. Worn with a cup."
+	desc = "A pair of loose breeches with leather reinforcements on the waist and legs. Worn with a codpiece."
 	icon_state = "fencingbreeches"
 	detail_tag = "_detail"
 	color = "#FFFFFF"
@@ -109,7 +107,7 @@
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/eastpants2
 	name = "strange ripped pants"
-	desc = "Weird pants typically worn by the destitute in Yanshen. Or, those looking to make a fashion statement."
+	desc = "Weird pants typically worn by the destitute in Yanshen... or those looking to make a fashion statement."
 	icon_state = "eastpants2"
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	max_integrity = ARMOR_INT_LEG_HARDLEATHER - 50

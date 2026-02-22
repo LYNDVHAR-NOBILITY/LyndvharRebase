@@ -39,7 +39,7 @@
 
 /obj/item/clothing/under/roguetown/skirt/desert
 	name = "desert skirt"
-	desc = "At least it cools me off, but what of the modesty?"
+	desc = "It'll at least keep you cool, but what of the modesty?"
 	icon_state = "desertskirt"
 	item_state = "desertskirt"
 

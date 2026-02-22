@@ -1,6 +1,6 @@
 /obj/item/clothing/under/roguetown/platelegs
 	name = "steel plate chausses"
-	desc = "Armored leggings, covered in segmented plates of steel. The trouseres beneath are lined with quilted cloth, ensuring that neither pintle-nor-gudgeon shall succumb to the motions-of-war."
+	desc = "Armored leggings, covered in segmented plates of steel. The trousers beneath are lined with quilted cloth, ensuring that neither pintle-nor-gudgeon shall succumb to the motions-of-war."
 	gender = PLURAL
 	icon_state = "plate_legs"
 	item_state = "plate_legs"
