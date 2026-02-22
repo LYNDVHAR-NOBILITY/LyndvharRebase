@@ -466,7 +466,7 @@
 /obj/item/clothing/ring/diamond/triumph
 	name = "ornate dorpel ring"
 	icon_state = "g_newring_diamond"
-	desc = "A ring of royal splendor, crested with a magnificently-cut dorpel. Its prismesque reflections remind you of a dream, from long ago; a ship, sailing across a sea of rainbowed phlogiston, to a castle far beyond the clouds.."
+	desc = "A ring of royal splendor, crested with a magnificently-cut dorpel. Its prism-esque reflections remind you of a dream, from long ago; a ship, sailing across a sea of rainbowed phlogiston, to a castle far beyond the clouds.."
 	sellprice = 99
 	smeltresult = /obj/item/clothing/ring/signet/triumph
 
@@ -477,7 +477,7 @@
 
 /obj/item/clothing/ring/gold/triumph
 	name = "ornate gold ring"
-	desc = "A ring of golden beauty, who's story could only be retold by a lonesome tongue."
+	desc = "A ring of golden beauty, whose story could only be retold by a lonesome tongue."
 	sellprice = 33
 
 /////////////////////////

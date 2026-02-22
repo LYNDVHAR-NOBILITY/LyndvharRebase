@@ -78,7 +78,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/winged
 	name = "winged cap"
-	desc = "A helmet with two wings on its sides."
+	desc = "A helmet with two wings on its sides. Won't help with flying."
 	icon_state = "wingedcap"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
@@ -184,13 +184,13 @@
 /obj/item/clothing/head/roguetown/helmet/sallet/iron
 	name = "iron sallet"
 	icon_state = "isallet"
-	desc = "A iron helmet covers most of the head, offeirng superior coverage to the kettle helmet. It comfortably fits atop most padded coifs-and-caps."
+	desc = "A iron helmet that covers most of the head, offering superior coverage to the kettle helmet. It comfortably fits atop most padded coifs and caps."
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_HELMET_IRON
 
 /obj/item/clothing/head/roguetown/helmet/sallet/beastskull
 	name = "beast skull"
-	desc = "The skull of a horned beast, carved and fashioned into a helmet. An steel skull cap has been inserted on the inside."
+	desc = "The skull of a horned beast, carved and fashioned into a helmet. A steel skull cap has been inserted on the inside."
 	icon_state = "marauder_head"
 	body_parts_covered = HEAD|EARS|HAIR
 	max_integrity = ARMOR_INT_HELMET_STEEL + 50
@@ -202,7 +202,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/sallet/visored
 	name = "visored sallet"
-	desc = "A steel 'sallet'-styled helmet with an adjustable visor. Away with you, vile beggar!"
+	desc = "A steel 'sallet' styled helmet with an adjustable visor. Away with you, vile beggar!"
 	icon_state = "sallet_visor"
 	adjustable = CAN_CADJUST
 	flags_inv = HIDEEARS|HIDEFACE|HIDESNOUT|HIDEHAIR
@@ -266,7 +266,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/sallet/beastskull
 	name = "beast skull"
-	desc = "The skull of a horned beast, carved and fashioned into a helmet. An steel skull cap has been inserted on the inside."
+	desc = "The skull of a horned beast, carved and fashioned into a helmet. A steel skull cap has been inserted on the inside."
 	icon_state = "marauder_head"
 	body_parts_covered = HEAD|EARS|HAIR
 	max_integrity = ARMOR_INT_HELMET_STEEL + 50
@@ -543,7 +543,7 @@
 // Warden Helmets
 /obj/item/clothing/head/roguetown/helmet/bascinet/antler
 	name = "wardens's helmet"
-	desc = "A beastly snouted armet with the large horns of an elder saiga protruding from it. Residents of Lyndvhar know not to fear such a sight in the wilds, for they are exclusively associated with the Draguippe Wardens- or atleast once were."
+	desc = "A beastly snouted armet with the large horns of an elder saiga protruding from it. Residents of Lyndvhar know not to fear such a sight in the wilds, for they are exclusively associated with the Draguippe Wardens -- or, atleast, once were."
 	icon = 'icons/roguetown/clothing/special/warden.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/warden64.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
@@ -620,7 +620,7 @@
 
 /obj/item/clothing/head/roguetown/roguehood/warden/antler
 	name = "warden's antlered hood"
-	desc = "A hunter's leather hood with two linen layers, sewn larger than usual tooo accommodate a helmet, and fitted with the large horns of an elder saiga."
+	desc = "A hunter's leather hood with two linen layers, sewn larger than usual to accommodate a helmet, and fitted with the large horns of an elder saiga."
 	icon_state = "wardenhoodalt"
 	item_state = "wardenhoodalt"
 	icon = 'icons/roguetown/clothing/special/warden.dmi'

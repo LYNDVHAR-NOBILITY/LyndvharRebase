@@ -74,7 +74,7 @@
 	color = CLOTHING_SCARLET
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
-	color = CLOTHING_AZURE
+	color = CLOTHING_BLACK
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/guard/Initialize()
 	. = ..()
@@ -164,7 +164,7 @@
 	icon_state = "noblecoat"
 	sleevetype = "noblecoat"
 	detail_tag = "_detail"
-	detail_color = CLOTHING_AZURE
+	detail_color = CLOTHING_BLACK
 	color = CLOTHING_WHITE
 	boobed = TRUE
 
@@ -246,7 +246,7 @@
 	desc = "A gold-embroidered dress shirt tailored for the right hand man."
 	icon_state = "prince"
 	boobed = TRUE
-	detail_color = CLOTHING_AZURE
+	detail_color = CLOTHING_BLACK
 
 /obj/item/clothing/suit/roguetown/shirt/dress/royal/hand_f
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
@@ -254,7 +254,7 @@
 	desc = "A flowy, intricate dress made by the finest tailors in the land for the right hand man."
 	icon_state = "princess"
 	boobed = TRUE
-	detail_color = CLOTHING_AZURE
+	detail_color = CLOTHING_BLACK
 
 /obj/item/clothing/suit/roguetown/shirt/dress/silkydress
 	name = "silky dress"
@@ -577,7 +577,7 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	flags_inv = HIDECROTCH|HIDEBOOB
 	detail_color = CLOTHING_WHITE
-	color = CLOTHING_AZURE
+	color = CLOTHING_BLACK
 	altdetail_color = CLOTHING_WHITE
 
 
@@ -609,7 +609,7 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/steward
 	color = null
 	name = "ornate silk dress"
-	desc = "A dress woven of only the finest, softest silks. Golden thread is inlaid with a deep royal crimson, expressing the owner's exquisitve wealth."
+	desc = "A dress woven of only the finest, softest silks. Golden thread is inlaid with a deep royal crimson, expressing the owner's exquisite wealth."
 	icon_state = "stewarddress"
 	item_state = "stewarddress"
 
@@ -686,7 +686,7 @@
 
 /obj/item/clothing/suit/roguetown/shirt/desertbra
 	name = "desert bra"
-	desc = "An exquisite bra crafted from durable cloth. It leaves little to the imagination. Why is it a desert bra and not just a bra?"
+	desc = "An exquisite bra crafted from durable cloth. It leaves little to the imagination... except, why is it a desert bra and not just a bra?"
 	icon_state = "desertbra"
 	item_state = "desertbra"
 	body_parts_covered = CHEST
@@ -701,7 +701,7 @@
 /obj/item/clothing/suit/roguetown/shirt/undershirt/eastshirt1
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	name = "black foreign shirt"
-	desc = "A shirt typically used by thugs."
+	desc = "A foreign style of shirt typically used by foreign thugs."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "eastshirt1"
 	icon = 'icons/roguetown/clothing/shirts.dmi'
@@ -715,7 +715,7 @@
 /obj/item/clothing/suit/roguetown/shirt/undershirt/eastshirt2
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	name = "white foreign shirt"
-	desc = "A shirt typically used by foreign gangs."
+	desc = "A foreign style of shirt typically used by foreign gangs."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	icon_state = "eastshirt2"
 	icon = 'icons/roguetown/clothing/shirts.dmi'

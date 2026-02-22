@@ -46,7 +46,7 @@
 	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/head/roguetown/helmet/leather/chapeau
-	name = "Chapeau a Naled"
+	name = "Chapeau a Khazumi"
 	desc = "A leather cap, armored with layers of especially crafted armored coins each baring wards against supernatural forces. The heavy closeable, face-obscuring flaps are both practical, to protect from sand and dust and frigid nights."
 	icon_state = "chapnaled"
 	var/open_wear = TRUE
@@ -199,7 +199,7 @@
 
 /obj/item/clothing/head/roguetown/grenzelhofthat/triumph
 	name = "grenzelhoft tellerbarret"
-	desc = "The latest in sixteenth-century fashionwear, stitched by the finest tailors in Grenzelhoft. </br>I can fit this onto a sallet, Calmirixian bascinet, or Blacksteel armet for added protection."
+	desc = "The latest in fashionwear, stitched by the finest tailors in Grenzelhoft. </br>I can fit this onto a sallet, Calmirixian bascinet, or Blacksteel armet for added protection."
 	max_integrity = ARMOR_INT_HELMET_CLOTH
 	prevent_crits = PREVENT_CRITS_NONE
 	icon_state = "grenzelhat"

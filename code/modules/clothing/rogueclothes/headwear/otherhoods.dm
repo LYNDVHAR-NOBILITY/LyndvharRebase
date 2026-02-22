@@ -1,6 +1,6 @@
 /obj/item/clothing/head/roguetown/antlerhood
 	name = "antlerhood"
-	desc = "A hood suited for druids and shamans."
+	desc = "A hood, suited for druids and shamans."
 	color = null
 	flags_inv = HIDEEARS|HIDEHAIR
 	icon_state = "antlerhood"
@@ -90,7 +90,7 @@
 
 /obj/item/clothing/head/roguetown/menacing
 	name = "sack hood"
-	desc = "A hood commonly worn by executioners to hide their face; The stigma of such a role, and all the grisly work it entails, makes many executioners outcasts in their own right."
+	desc = "A hood commonly worn by executioners to hide their face; The stigma of such a role -- and all the grisly work it entails -- makes many executioners outcasts in their own right."
 	icon_state = "menacing"
 	item_state = "menacing"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
@@ -121,7 +121,7 @@
 	sewrepair = TRUE
 	flags_inv = HIDEEARS
 	detail_color = CLOTHING_WHITE
-	color = CLOTHING_AZURE
+	color = CLOTHING_BLACK
 	altdetail_color = CLOTHING_WHITE
 
 /obj/item/clothing/head/roguetown/jester/update_icon()

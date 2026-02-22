@@ -12,7 +12,7 @@
 	
 /obj/item/clothing/suit/roguetown/armor/longcoat
 	name = "longcoat"
-	desc = "A padded longcoat meant to keep you warm in the frigid winters"
+	desc = "A padded longcoat, meant to keep you warm."
 	icon_state = "longcoat"
 	color = CLOTHING_BLACK
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
@@ -35,7 +35,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/workervest
 	name = "striped tunic"
-	desc = "This cheap tunic is often used by sturdy laborous men and women."
+	desc = "This cheap tunic is often used by sturdy, laborous men and women."
 	icon_state = "workervest"
 	armor = null
 	blocksound = SOFTHIT

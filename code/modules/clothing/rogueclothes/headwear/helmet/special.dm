@@ -69,7 +69,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/blacksteel/modern/grenzelhoft
 	name = "blacksteel armet w/plume hat"
-	desc = "A Grenzelhoftian plume hat placed atop a blacksteel armet, staying fashionable while protecting the wearer's head for a better degree. Aren't you the affluent mercenary."
+	desc = "A Grenzelhoftian plume hat placed atop a blacksteel armet. Staying fashionable, while protecting the wearer's head to a better degree... aren't you the affluent mercenary?"
 	icon_state = "grenzelblack"
 	item_state = "grenzelblack"
 	icon = 'icons/roguetown/clothing/special/grenzelhats.dmi'
@@ -102,7 +102,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/sallet/grenzelhoft/triumph
 	name = "sallet w/plumed beret"
-	desc = "A Grenzelhoftian 'tellerbarret' placed atop a regular steel sallet, staying fashionable while protecting the wearer's head to a better degree."
+	desc = "A Grenzelhoftian 'tellerbarret' placed atop a regular steel sallet. Staying fashionable, while protecting the wearer's head to a better degree."
 	icon_state = "grenzelmid"
 	item_state = "grenzelmid"
 	icon = 'icons/roguetown/clothing/special/grenzelhats.dmi'
@@ -133,7 +133,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/calmirixia/grenzelhoft/triumph
 	name = "calmirixian bascinet w/plumed beret"
-	desc = "A Grenzelhoftian 'tellerbarret' placed atop a Calmirixian bascinet, staying fashionable while protecting the wearer's head to a better degree."
+	desc = "A Grenzelhoftian 'tellerbarret' placed atop a Calmirixian bascinet. Staying fashionable, while protecting the wearer's head to a better degree."
 	icon_state = "grenzelheavy"
 	item_state = "grenzelheavy"
 	icon = 'icons/roguetown/clothing/special/grenzelhats.dmi'
@@ -164,7 +164,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/blacksteel/modern/grenzelhoft/triumph
 	name = "blacksteel armet w/plumed beret"
-	desc = "A Grenzelhoftian 'tellerbarret' placed atop a blacksteel armet, staying fashionable while protecting the wearer's head for a better degree. Aren't you the affluent mercenary."
+	desc = "A Grenzelhoftian 'tellerbarret' placed atop a blacksteel armet. Staying fashionable, while protecting the wearer's head to a better degree... aren't you the affluent mercenary?"
 	icon_state = "grenzelblack"
 	item_state = "grenzelblack"
 	icon = 'icons/roguetown/clothing/special/grenzelhats.dmi'

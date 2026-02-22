@@ -69,7 +69,7 @@
 
 /obj/item/clothing/gloves/roguetown/valorian
 	name = "valorian leather gloves"
-	desc = "A pair of heavy Valorian leather gloves, commonly used by fencers and renowned for their quality."
+	desc = "A pair of heavy Valorian leather gloves commonly used by fencers, and renowned for their quality."
 	icon_state = "fencergloves"
 	item_state = "fencergloves"
 	armor = ARMOR_MAILLE
@@ -102,7 +102,7 @@
 // Eastern gloves
 /obj/item/clothing/gloves/roguetown/eastgloves1
 	name = "black gloves"
-	desc = "Sleek gloves typically used by swordsmen."
+	desc = "Sleek gloves typically used by eastern swordsmen."
 	icon_state = "eastgloves1"
 	item_state = "eastgloves1"
 	armor = ARMOR_LEATHER

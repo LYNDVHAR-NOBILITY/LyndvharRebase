@@ -56,7 +56,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/lord/heavy
 	name = "padded arming jacket"
-	desc = "A collared jacket, intended to be worn underneath plate armor. The thicker padding ensures that any gaps left within its alloyed shell are thoroughly protected - lest an unforseen bowstrike, landing true, ruptures the vulnerable flesh beneath."
+	desc = "A collared jacket, intended to be worn underneath plate armor. The thicker padding ensures that any gaps left within its alloyed shell are thoroughly protected - lest an unforseen thrust, landing true, ruptures the vulnerable flesh beneath."
 	icon_state = "dgamb"
 	body_parts_covered = COVERAGE_ALL_BUT_HANDLEGS
 	armor = ARMOR_PADDED_GOOD
@@ -65,14 +65,14 @@
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/lord/heavy/silkjacket
 	name = "besilked jacket"
-	desc = "A lightweight jacket, who's besilked stitchwork allows it to catch thrusts-and-arrows alike without compromise. For reasons that needn't be spoken, such traits make it coveted among lesser nobility."
+	desc = "A lightweight jacket, whose besilked stitchwork allows it to catch thrusts-and-arrows alike without compromise. For reasons that needn't be spoken, such traits make it coveted among lesser nobility."
 	icon = 'icons/roguetown/clothing/shirts.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
 	icon_state = "puritan_shirt"
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 	name = "padded gambeson"
-	desc = "A heavyweight jacket, further tightened with dorpel-styled stitchwork. On its own, it is a masterwork that can reduce a crushing blow into a slight tickle; beneath an alloyed chestplate, it can ward off anything short of a greater fireball."
+	desc = "A heavyweight jacket, further tightened with dorpel-styled stitchwork. On its own, it is a masterful and light gambeson that can save its user from an otherwise deadly blow; beneath a proper metal chestplate, it can dampen blows such that their user might not realize they happened."
 	icon_state = "gambesonp"
 	armor = ARMOR_PADDED_GOOD
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
@@ -113,7 +113,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/valorian
 	name = "fencing gambeson"
-	desc = "A large shirt with heavy padding meant to be used below armor. Will probably stop an arrow, unlikely to stop a bolt."
+	desc = "A large shirt with heavy padding meant to be used below armor. One should take care when relying on it for protection in proper battle, as it may prove insufficent on its own."
 	icon_state = "fancygamb"
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	color = "#5058c1"
@@ -271,7 +271,7 @@
 //Special Hand armor. More defense, low integrity, similar logic to tattoos. Can't be worn in shirt slot.
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/hand
 	name = "hand's gambeson"
-	desc = "Sturdy leather, fine silks and ornaments of gold, opulent and imperial, for any one who must say <i>\"I am in charge.\"</i> holds no power at all."
+	desc = "Sturdy leather, fine silks and ornaments of gold, opulent and imperial, for any one who must say <i>\"I am in charge.\"</i> holds no power at all, except its material."
 	icon = 'icons/roguetown/clothing/special/hand.dmi'
 	icon_state = "handgambeson"
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/hand.dmi'

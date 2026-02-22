@@ -56,8 +56,7 @@
 /obj/item/clothing/suit/roguetown/shirt/robe/abyssor //thanks to cre for abyssor clothing sprites
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
 	name = "depths robe"
-	desc = "A long robe formed of many layers of thin, light fabric; designed not to become over-heavy \
-	while waterlogged."
+	desc = "A long robe formed of many layers of thin, light fabric; designed not to become over-heavy while waterlogged."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "abyssorrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -99,8 +98,7 @@
 /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
 	name = "briar robe"
-	desc = "A coarse, rough robe worn often by devout worshippers of Dendor, the Mad God, lord of all \
-	the wild places of the world. It's quite terribly itchy."
+	desc = "A coarse, rough robe worn often by devout worshippers of Dendor, the Mad God, lord of all the wild places of the world. It's quite terribly itchy."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "dendorrobe"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -133,7 +131,7 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/priest
 	name = "solar vestments"
-	desc = "Holy vestments sanctified by divine hands. Caution is advised if not a faithful."
+	desc = "Holy vestments sanctified by divine hands. Caution is advised if one is not of the chosen faithful."
 	icon_state = "priestrobe"
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	resistance_flags = FIRE_PROOF // astratan

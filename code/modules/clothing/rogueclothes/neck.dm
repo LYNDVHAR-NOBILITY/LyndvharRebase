@@ -364,7 +364,7 @@
 
 /obj/item/clothing/neck/roguetown/gorget/forlorncollar
 	name = "forlorn collar"
-	desc = "A old reminder."
+	desc = "An old reminder."
 	icon_state = "iwolfcollaralt"
 
 /obj/item/clothing/neck/roguetown/gorget/steel
@@ -494,7 +494,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/aalloy
 	name = "decrepit psicross"
-	desc = "'A comet capable of rending all the enemies of humanity apart; oh, how graceful His power was! And His sacrifice, ever so noble! Yet now He slumbers, unaware of the fruits His efforts came to give. And He sighs. And He weeps.'"
+	desc = "'O LORD </br> GIVE </br> ENLIGHTENMENT.'"
 	icon_state = "psycross_a"
 	color = "#bb9696"
 	chunkcolor = "#532e25"
@@ -502,7 +502,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/inhumen/aalloy
 	name = "decrepit zcross"
-	desc = "'Progress. Ascension. Destiny. A mandate, commanded by God, to be fufilled by Man. She called us forth from the edge of reality - and with Her dying breath, rasped out the final truth; the fire is gone, and the world will soon follow.'"
+	desc = "'Progress. Ascension. Destiny. A mandate, commanded by a God, to be fufilled by Man. She called us forth from the edge of reality - and with Her dying breath, rasped out the final truth; the fire is gone, and the world will soon follow.'"
 	icon_state = "zcross_a"
 	color = "#bb9696"
 	chunkcolor = "#532e25"
@@ -531,7 +531,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios
 	name = "amulet of Matthios"
-	desc = "He was but one flame in the dark. Together, his flock shall outblaze the tyrant sun."
+	desc = "He was but one flame in the dark. Together, his flock shall outblaze even the sun."
 	icon_state = "matthios"
 	resistance_flags = FIRE_PROOF
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
@@ -547,7 +547,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/undivided
 	name = "amulet of Ten"
-	desc = "The Ten eternal, strength in unity. Stalwart for centuries against the darkness."
+	desc = "The Ten eternal, strength in unity. To be stalwart for centuries, against the darkness."
 	icon_state = "undivided"
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
 
@@ -706,7 +706,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/g
 	name = "golden psycross"
-	desc = "'Purity afloat, for paradise awaits!'"
+	desc = "'ENDURE, for paradise awaits!'"
 	icon_state = "psycross_g"
 	item_state = "psycross_g"
 	//dropshrink = 0.75
@@ -732,7 +732,7 @@
 /obj/item/clothing/neck/roguetown/psicross/shell
 	name = "oyster shell necklace"
 	icon_state = "oyster_necklace"
-	desc = "A necklace of strung-up sea shells, the calming noise they make when they clack together is reminiscent of a shellfish's claws. They remind you that while men no longer live in water, Abyssor will always remember our origins."
+	desc = "A necklace of strung-up sea shells. The calming noise they make when they clack together is reminiscent of a shellfish's claws. </br> </br> They remind you that while men no longer live in water, Abyssor will always remember our origins."
 	sellprice = 25
 	salvage_result = /obj/item/oystershell
 	salvage_amount = 5
@@ -740,7 +740,7 @@
 /obj/item/clothing/neck/roguetown/psicross/shell/bracelet
 	name = "shell bracelet"
 	icon_state = "oyster_bracelet"
-	desc = "A beaded bracelet made from sea shells, their rough exterior and glossy interior reminding you that Abyssor's children hide the best gifts at the deepest spots beneath the waves."
+	desc = "A beaded bracelet made from sea shells. Their rough exterior and glossy interior remind you that Abyssor's children hide the best gifts at the deepest spots beneath the waves."
 	sellprice = 15
 	slot_flags = ITEM_SLOT_WRISTS
 	salvage_result = /obj/item/oystershell
@@ -903,7 +903,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/astrata/g/triumph
 	name = "ornate amulet of Astrata"
-	desc = "Her command is absolute, and Her tyranny is unmarrable. Reclaim this world, child of mine, from those who'd seek to destroy it."
+	desc = "Her command is absolute, and Her rule is unmarrable. Reclaim this world, child of mine, from those who'd seek to destroy it."
 	icon_state = "astrata_g"
 	sellprice = 77
 
@@ -911,7 +911,7 @@
 
 /obj/item/clothing/neck/roguetown/luckcharm
 	name = "luck charm"
-	desc = "A cabbit's foot necklace. Some say it brings good luck. It only feels more lucky when it's worn around the neck."
+	desc = "A cabbit's foot necklace. Some say it brings good luck, though it's said to need to be worn around the neck."
 	icon_state = "luckcharm"
 	sellprice = 15
 	possible_item_intents = list(/datum/intent/use, /datum/intent/special/magicarc)
@@ -1072,7 +1072,7 @@
 	. = ..()
 	if(slot == SLOT_NECK)
 		active_item = TRUE
-		to_chat(user, span_red("As you don the psicross, the chains tighten like a vice around your neck!  </br>  </br>You're overcome with a sense of terrible anguish - all of humenity's suffering, thrust upon your very spirit!  </br>  </br>Your chest grows cold, yet your blood boils hotter than magma! Beowricke's villains may be brutal and merciless, but you will be WORSE!  </br>  </br>You've gone BERSERK!"))
+		to_chat(user, span_red("As you don the psicross, the chains tighten like a vice around your neck!  </br>  </br>You're overcome with a sense of terrible anguish - all of lyfe's suffering, thrust upon your very spirit!  </br>  </br>Your chest grows cold, yet your blood boils hotter than magma! Beowricke's villains may be brutal and merciless, but you will be WORSE!  </br>  </br>You've gone BERSERK!"))
 		user.change_stat(STATKEY_STR, 3)
 		user.change_stat(STATKEY_CON, 3)
 		user.change_stat(STATKEY_WIL, 3)

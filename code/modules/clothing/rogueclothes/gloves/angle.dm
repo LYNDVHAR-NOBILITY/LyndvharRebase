@@ -33,7 +33,7 @@
 
 /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/freifechter
 	name = "fencing gloves"
-	desc = "A pair of hardened leather gloves used by fencers who aren't exactly convinced of losing a finger to a particularly strong feder cut. The inside is padded for extra durability."
+	desc = "A pair of hardened leather gloves used by fencers who are cautious of a particularly powerful feder cut leaving them without a full finger. The inside is padded for extra durability."
 	max_integrity = ARMOR_INT_SIDE_HARDLEATHER + 50
 
 /obj/item/clothing/gloves/roguetown/angle/pontifex
