@@ -341,7 +341,7 @@
 
 /datum/stressevent/syoncalamity
 	stressadd = 15
-	desc = span_boldred("By Psydon, the great comet's shard is no more! What will we do now!?")
+	desc = span_boldred("By Psydon, the great relic is no more! What will we do now!?")
 	timer = 15 MINUTES
 
 /datum/stressevent/hithead

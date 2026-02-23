@@ -27,7 +27,7 @@
 /datum/intent/dagger/cut/heavy
 	name = "heavy cut"
 	damfactor = 1.2
-	penfactor = 25
+	penfactor = 20
 	clickcd = 11
 
 // For thrusting-focused daggers. Thinner blade, less slashing damage.
@@ -51,9 +51,6 @@
 /datum/intent/dagger/thrust/weak
 	name = "lopsided thrust"
 	damfactor = 0.8
-	penfactor = 45 // Slightly more pen, to compensate in penetration for the lower damage.
-	// You're still doing less damage than with a stabbier dagger, but your AP isn't penalised.
-	clickcd = 10
 
 /datum/intent/dagger/thrust/pick
 	name = "icepick stab"
@@ -76,11 +73,10 @@
 /datum/intent/dagger/sucker_punch
 	name = "unevadable punch"
 	icon_state = "inpunch"
-	desc = "Breech your target's guard with a swift-and-sudden jab. This strike deals low damage, but cannot be parried or dodged."
-	attack_verb = list("punches", "jabs", "clocks")
+	attack_verb = list("punches", "jabs", "clocks", "swings past")
 	animname = "strike"
 	blade_class = BCLASS_BLUNT
-	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
+	hitsound = list('sound/combat/hits/blunt/bluntsmall (1).ogg', 'sound/combat/hits/blunt/bluntsmall (2).ogg', 'sound/combat/hits/kick/kick.ogg')
 	damfactor = 0.6 // Less damage than a normal attack I don't want this to be better than stabbing
 	penfactor = BLUNT_DEFAULT_PENFACTOR
 	clickcd = 14
@@ -221,7 +217,7 @@
 
 /obj/item/rogueweapon/huntingknife/bronze
 	name = "bronze knife"
-	desc = "A wide blade of bronze, fitted to a wooden handle. Ancient laborers and priests coveted this tool above all else: both as a means to handle the dae's labors, and to indulge in the rituos of sacrifice."
+	desc = "A wide blade of bronze, fitted to a wooden handle. Ancient laborers and priests alike coveted this tool above all else: both as a means to handle the dae's labors, and to indulge in the rituos of sacrifice."
 	icon_state = "bronzeknife"
 	sheathe_icon = "genknife"
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/bronze)
@@ -395,7 +391,7 @@
 
 /obj/item/rogueweapon/huntingknife/combat/bronze
 	name = "sydearmme"
-	desc = "Wedged bronze and whittled rockwood, handfitted into the dagger's most ancient-of-ancestors. It bares marks of flintknaping along its middlewidth; a customary tradition that's purported to atune its edge to the forces of nature."
+	desc = "Wedged bronze and whittled rockwood, handfitted into the dagger's most ancient-of-ancestors. It bares marks of flintknapping along its middlewidth; a customary tradition that's purported to attune its edge to the forces of nature."
 	icon_state = "bronzedagger"
 	sheathe_icon = "bronzedagger"
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/bronze)
@@ -437,7 +433,7 @@
 	intent_intdamage_factor = 0.05
 
 /obj/item/rogueweapon/huntingknife/idagger
-	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/cut, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch)
+	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch)
 	force = 15
 	max_integrity = 100
 	name = "iron dagger"
@@ -447,28 +443,23 @@
 	smeltresult = /obj/item/ingot/iron
 	special = /datum/special_intent/dagger_dash
 
-// Standard dagger for wardens, or for any other forester-styled class. While a pick-dagger penetrates
-// armour, this is more focused on breaking *through* it and then dealing a lot of damage via REND.
 /obj/item/rogueweapon/huntingknife/idagger/warden_machete
-	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/thrust/weak, /datum/intent/dagger/cut/rend, /datum/intent/dagger/sucker_punch)
+	possible_item_intents = list(/datum/intent/dagger/thrust/weak, /datum/intent/dagger/cut/heavy, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/sucker_punch) // Stronger cut and chop, but no pick.
 	force = 22 // Slightly more damage than a steel dagger.
 	max_integrity = 130 // Slightly less integrity than a steel dagger.
-	name = "warden's seax"
-	desc = "A well-worn seax utilised by the Fraternity of Wardens both as a tool and weapon. Nearly as effective for hacking \
-	down men as it is foiliage, but not quite as durable as more modern steel tools. More suitable for cutting than for thrusting."
+	name = "Wardens' seax"
+	desc = "A well-worn seax utilised by the Fraternity of Wardens both as a tool and weapon. Nearly as effective for hacking down men as it is foiliage, but not quite as durable as more modern steel tools. More suitable for cutting than for thrusting."
 	icon_state = "warden_machete"
 	sheathe_icon = "warden_machete"
 
 /obj/item/rogueweapon/huntingknife/combat/messser //Just as Grenzelhoft intended
 	name = "kampfmesser"
-	desc = "An undersized steel messer that barely fits into a conventional dagger sheath, the saving grace of any hunter. It lacks a tip for stabbing - yet the edge alone is sharp enough to hack most issues right away. \
-	While it was brought over by Grenzelhoftian migrants, it is considered a Lyndvhar staple these daes - the right tool for the right job."
+	desc = "An undersized steel messer that barely fits into a conventional dagger sheath, the saving grace of any hunter. It lacks a tip for stabbing - yet the edge alone is sharp enough to hack most issues right away. While it was brought over by Grenzelhoftian migrants, it is considered a Lyndvhar staple these daes - the right tool for the right job."
 	possible_item_intents = list(/datum/intent/dagger/cut/rend, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/cut/heavy, /datum/intent/dagger/sucker_punch)
 	icon_state = "minimesser"
 	sheathe_icon = "minimesser"
 	max_blade_int = 200
 	max_integrity = 150
-	special = /datum/special_intent/shin_swipe
 
 /obj/item/rogueweapon/huntingknife/idagger/virtue
 	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch)
@@ -587,7 +578,7 @@
 
 /obj/item/rogueweapon/huntingknife/idagger/dtace
 	name = "'De Tace'"
-	desc = "The right hand of the right hand, this narrow length of steel serves as a quick solution to petty greviences."
+	desc = "The right hand of the right hand, this narrow length of steel serves as a quick solution to petty grievances."
 	icon = 'icons/roguetown/weapons/special/hand32.dmi'
 	icon_state = "sdaggerhand"
 	sheathe_icon = "sdaggerhand"
@@ -607,13 +598,8 @@
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying
 	name = "steel parrying dagger"
-	desc = "A dagger meant purely for defense against oncoming blows - don't expect to deflect an oncoming mace though."
-	icon_state = "spdagger"
-	sheathe_icon = "spdagger"
-	force = 10
-	throwforce = 10
+	desc = "A dagger with an enlongated crossguard, curved upwards on both ends to catch oncoming strikes."
 	wdefense = 9
-	max_integrity = 200
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying/hand
 	name = "'Repeta'"
@@ -642,8 +628,7 @@
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/yanshen
 	name = "steel tanto"
-	desc = "A steel dagger imported from the Yansheneze badlands. A sturdy blade bears a subtle curve, set into a decorated circular crossguard. A waxed \
-	wrapping of twisted cordage provides a secure grip."
+	desc = "A steel dagger from the Yansheneze coast. A sturdy blade with subtle patterning bears a subtle curve, set into a decorated circular crossguard. A waxed wrapping of twisted cordage provides a secure grip."
 	icon_state = "eastdagger"
 	sheathe_icon = "tanto"
 
@@ -689,8 +674,8 @@
 
 /obj/item/rogueweapon/huntingknife/idagger/stake
 	name = "sharpened stake"
-	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
-	icon_state = "heavystake"
+	desc = "A branch that has been broken off of a tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
+	icon_state = "stake"
 	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	force = 12
 	throwforce = 12
@@ -704,19 +689,10 @@
 	unequip_delay_self = 0 //No delay when drawing.
 	inv_storage_delay = 0 //No delay when retrieving from a storage slot.
 
-/obj/item/rogueweapon/huntingknife/idagger/stake/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.5,"sx" = -10,"sy" = -6,"nx" = 11,"ny" = -6,"wx" = -4,"wy" = -6,"ex" = 2,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.3,"sx" = -2,"sy" = -6,"nx" = 4,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = 2,"ey" = -6,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-
 /obj/item/rogueweapon/huntingknife/idagger/silver/stake
 	name = "silver-tipped stake"
 	desc = "A branch that has been broken off of a boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
-	icon_state = "heavystake_silver"
+	icon_state = "stake_silver"
 	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	force = 20
 	throwforce = 20
@@ -747,42 +723,6 @@
 		/datum/component/silverbless,\
 		pre_blessed = BLESSING_TENNITE,\
 		silver_type = SILVER_TENNITE,\
-		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 0,\
-		added_def = 0,\
-	)
-
-
-/obj/item/rogueweapon/huntingknife/idagger/silver/stake/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.5,"sx" = -10,"sy" = -6,"nx" = 11,"ny" = -6,"wx" = -4,"wy" = -6,"ex" = 2,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.3,"sx" = -2,"sy" = -6,"nx" = 4,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = 2,"ey" = -6,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-
-/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy
-	name = "silver-tipped otavan stake"
-	desc = "A branch that has been broken off of an Otavan boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
-
-/obj/item/rogueweapon/huntingknife/idagger/silver/stakepsy/ComponentInitialize()
-	AddComponent(\
-		/datum/component/silverbless,\
-		pre_blessed = BLESSING_NONE,\
-		silver_type = SILVER_PSYDONIAN,\
-		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 0,\
-		added_def = 0,\
-	)
-
-/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/preblessed/ComponentInitialize()
-	AddComponent(\
-		/datum/component/silverbless,\
-		pre_blessed = BLESSING_PSYDONIAN,\
-		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 100,\
 		added_int = 0,\
@@ -909,7 +849,7 @@
 
 /obj/item/rogueweapon/huntingknife/stoneknife/opalknife
 	name = "opal knife"
-	desc = "A beautiful knife carved out of opal. Its not intended for combat. It's presence is vital in some Crimson Elven ceremonies."
+	desc = "A beautiful knife carved out of opal. Its not intended for combat. It's presence is vital in some Elven ceremonies."
 	icon = 'icons/roguetown/gems/gem_opal.dmi'
 	icon_state = "knife_opal"
 	max_integrity = 75
@@ -1058,8 +998,7 @@
 
 /obj/item/rogueweapon/huntingknife/throwingknife/yanshen
 	name = "eastern tossblade"
-	desc = "A four pointed throwing knife ground and sharpened from a single piece of metal. The design is intended to solve one of weaknesses of basic tossblades; \
-	more points means these are more likely to land point-first. </br>This dagger can be stowed away inside a pair of boots, permitting it to be quickly drawn when needed."
+	desc = "A four pointed throwing knife ground and sharpened from a single piece of metal. The design is intended to solve one of weaknesses of basic tossblades; more points means these are more likely to land point-first. </br>This dagger can be stowed away inside a pair of boots, permitting it to be quickly drawn when needed."
 	icon_state = "easttossblade"
 
 /obj/item/rogueweapon/huntingknife/throwingknife/aalloy

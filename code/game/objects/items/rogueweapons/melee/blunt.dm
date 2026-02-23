@@ -814,7 +814,7 @@
 
 /obj/item/rogueweapon/mace/warhammer/steel/paalloy
 	name = "ancient alloy warhammer"
-	desc = "A macehead of polished gilbranze, spiked and perched atop a reinforced shaft. An elegant weapon from a more civilized age; when Man lived in harmony with one-another, and when 'the undying' was nothing more than a nitemare's thought."
+	desc = "A macehead of polished gilbranze, spiked and perched atop a reinforced shaft. An elegant weapon from a more civilized age; when man lived in harmony with one-another, though of course not too much in harmony that they didn't need these."
 	icon_state = "awarhammer"
 	smeltresult = /obj/item/ingot/aaslag
 
@@ -919,8 +919,7 @@
 
 /obj/item/rogueweapon/mace/maul/grand
 	name = "grand maul"
-	desc = "You could probably crack a man's spine just by tapping them with this. \
-	Only a lunatic would carry something so heavy, however."
+	desc = "You could probably crack a man's spine just by tapping them with this. You'd have to hit them first, however."
 	icon_state = "cross"
 	force_wielded = 34 // -1 compared to grand mace.
 	smeltresult = /obj/item/ingot/steel
@@ -946,8 +945,7 @@
 //Dwarvish mauls. Unobtanium outside of Grudgebearer. Do not change that.
 /obj/item/rogueweapon/mace/maul/steel
 	name = "dwarvish maul"
-	desc = "An incredibly heavy, oversized hammer. The owner is not compensating, for this maul will do the speaking. \
-	This one has been well balanced, allowing for a weaker wielder to make use of it."
+	desc = "An incredibly heavy, oversized hammer. The owner is not compensating, for this maul will do the speaking. This one has been well balanced, allowing for a weaker wielder to make use of it."
 	icon_state = "dwarfhammer"
 	smeltresult = /obj/item/ingot/steel
 	minstr = 11 // +2STR from Grudgebearer Soldier. Should cover this.
@@ -957,8 +955,7 @@
 
 /obj/item/rogueweapon/mace/maul/spiked
 	name = "spiked maul"
-	desc = "Covered in spikes, such is the weapon of a Dwarvish smith. \
-	This one has been well balanced, allowing for a weaker wielder to make use of it."
+	desc = "Covered in spikes, such is the weapon of a Dwarvish smith. This one has been well balanced, allowing for a weaker wielder to make use of it."
 	icon_state = "spiky"
 	gripped_intents = list(/datum/intent/maul/spiked, /datum/intent/mace/smash/grand, /datum/intent/effect/daze, /datum/intent/effect/hobble)
 	wdefense_wbonus = 2 //4

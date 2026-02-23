@@ -26,11 +26,6 @@
 	clickcd = 9
 	damfactor = 1
 
-/datum/intent/sword/cut/broadsword
-	name = "cut with half-sworded technique"
-	damfactor = 0.8 //Allows for utility-based carving with the broadswords. Technically combat viable, though you should probably take a Longsword if you're strictly using a Broadsword for cuts.
-	clickcd = 10 //On par with an Arming Sword.
-
 /datum/intent/sword/chop/militia
 	penfactor = 50
 	clickcd = CLICK_CD_CHARGED
@@ -183,10 +178,6 @@
 	item_d_type = "slash"
 	peel_divisor = 4
 
-/datum/intent/sword/peel/light
-	name = "light peel"
-	peel_divisor = 5
-
 /datum/intent/sword/peel/big
 	name = "big sword armor peel"
 	reach = 2
@@ -226,46 +217,37 @@
 
 /datum/intent/sword/chop/broadsword
 	name = "heavy swing" //Standard penetration, but with a higher damage modifier.
-	penfactor = 20
+	penfactor = 30
 	damfactor = 1.15
 
 /datum/intent/sword/thrust/long/broadsword
 	name = "heavy thrust" //Ditto.
-	penfactor = 20
+	penfactor = 30
 	damfactor = 1.15
 	swingdelay = 4 //Halved swingdelay compared to chopping.
 
-/datum/intent/sword/chop/broadsword/heavy
-	name = "efforted swing" //Standard penetration, but with a higher damage modifier. Exclusive to the Executioner Sword series, when two-handed - or the Berserker's Sword, when one-handed.
-	penfactor = 30
-	damfactor = 1.2
-	swingdelay = 10
-	clickcd = CLICK_CD_CHARGED
+/datum/intent/sword/thrust/long/broadsword/lesser
+	penfactor = 15
+	damfactor = 1.15
 
 /datum/intent/sword/thrust/long/broadsword/heavy
 	name = "impale" //Stabbing variant of the Chop intent. Higher damage, but slower and evadable. Exclusive to two-handed broadswords.
 	icon_state = "inimpale"
 	attack_verb = list("impales", "thrusts into")
-	penfactor = 20
-	damfactor = 1.2
+	penfactor = 30
+	damfactor = 1.3
 	swingdelay = 8
 
 /datum/intent/rend/krieg
 	intent_intdamage_factor = 0.2
 
-/datum/intent/rend/broadsword
-	intent_intdamage_factor = 0.1
-
 /datum/intent/sword/chop/cleave
 	name = "cleave"
-	icon_state = "intear"
-	attack_verb = list("cleaves", "tears through")
-	chargedrain = 1.8
-	chargetime = 12
-	swingdelay = 0
-	damfactor = 1.3
-	intent_intdamage_factor = 1.3
-	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XIII (3 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
+	chargedrain = 1
+	chargetime = 5
+	damfactor = 1.2
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
+	desc = "A powerful, charged-up swing that deals increased damage and can throw a standing opponent back and slow them down, based on your strength. Ineffective below 10 strength. Slowdown & Knockback scales to your Strength up to 13 (1 - 3 tiles). Cannot be used consecutively more than every 5 seconds on the same target. Prone targets halve the knockback distance. Not fully charging the attack limits knockback to 1 tile."
 	var/maxrange = 3
 
 /datum/intent/sword/chop/cleave/spec_on_apply_effect(mob/living/H, mob/living/user, params)
@@ -292,14 +274,11 @@
 		spin = FALSE, \
 		force = H.move_force)
 
-/datum/intent/sword/chop/cleave/prewarning()
-	if(mastermob)
-		playsound(mastermob, pick('sound/combat/rend_start.ogg'), 100, FALSE)
 
 //sword objs ฅ^•ﻌ•^ฅ
 /obj/item/rogueweapon/sword
 	name = "arming sword"
-	desc = "A long steel blade attached to a hilt, separated by a crossguard. The arming sword has been Beowricke's implement of war by excellence for generations."
+	desc = "A long steel blade attached to a hilt, separated by a crossguard. The arming sword has been Beowricke's standard implement of war for generations."
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BACK
 	force = 22
 	force_wielded = 25
@@ -351,7 +330,7 @@
 
 /obj/item/rogueweapon/sword/iron
 	name = "iron arming sword"
-	desc = "A long iron blade attached to a hilt, separated by a crossguard. The arming sword has been Beowricke's implement of war by excellence for generations, this one is cheaper than its steel brother."
+	desc = "A long steel blade attached to a hilt, separated by a crossguard. The arming sword has been Beowricke's standard implement of war for generations. This one is cheaper than its steel brother."
 	icon_state = "isword"
 	minstr = 6
 	smeltresult = /obj/item/ingot/iron
@@ -361,7 +340,7 @@
 
 /obj/item/rogueweapon/sword/bronze
 	name = "bronze arming sword"
-	desc = "A long bronze blade attached to a hilt, separated by a crossguard. The arming sword has been Beowricke's implement of war by excellence for generations - and this implement is the grandfather of them all. Though it lacks the gladii's girth, this arming sword still feels well-balanced for one-handed use."
+	desc = "A long steel blade attached to a hilt, separated by a crossguard. The arming sword has been Beowricke's standard implement of war for generations -- and this implement is the grandfather of them all. Though it lacks the gladii's girth, this arming sword still feels well-balanced for one-handed use."
 	icon_state = "bronzesword"
 	force = 23 //Iron- and steel arming swords have the same force. +2 to mimic the one-handed nature of bronze swords.
 	force_wielded = 25
@@ -420,7 +399,7 @@
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/chop)
 	gripped_intents = null
 	name = "stone sword"
-	desc = "A massive hunk of stone, chiseled down to form a crude flint-knapped blade. It has been pounded into a carved wooden handle, and further secured with tightly-wound fibers. </br>'Imitation is the sincerest form of flattery.'"
+	desc = "A crude mockery of what seems to be a sword, really just a long knapped stone tied to a carved wooden shaft."
 	icon_state = "stone_sword"
 	max_blade_int = 100
 	max_integrity = 70
@@ -432,10 +411,7 @@
 
 /obj/item/rogueweapon/sword/long
 	name = "longsword"
-	desc = "A lethal and perfectly balanced weapon. The longsword is the protagonist of endless tales and myths \
-	all across Beowricke, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
-	It has great cultural significance in the empires of today, where legendary swordsmen \
-	have created and perfected many fighting techniques.."
+	desc = "A lethal and perfectly balanced weapon. The longsword is the protagonist of endless tales and myths all across Beowricke, seen in the hands of noblemen, their warriors, and an ever-decreasing quantity of master duelists. It has great cultural significance in the empires of today, where legendary swordsmen have created and perfected many fighting techniques..."
 	force = 25
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust/long, /datum/intent/sword/strike, /datum/intent/sword/peel)
@@ -471,18 +447,14 @@
 
 /obj/item/rogueweapon/sword/long/broadsword
 	name = "broadsword"
-	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
-	swordsmen of Beowricke in their clashes against man-and-monster alike since time immemmorial. It is one of Rockhill's greatest \
-	cultural hallmarks, just behind the concepts of 'zenny-a-mug' happy hours and 'killing people over minor disagreements.'"
+	desc = "A lethal and well-balanced weapon. The broadsword has dutifully served the swordsmen of Beowricke in their clashes against man-and-monster alike since time immemmorial."
 	icon_state = "broadsword"
 	sheathe_icon = "broadsword"
-	swingsound = BLADEWOOSH_HUGE
 	max_blade_int = 230 //Less of an edge than the longsword..
 	max_integrity = 180 //..but tougher.
 	wdefense_wbonus = 3 // Same defense when one-handed, but slightly reduced wielded defense compared to the longsword.
-	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike, /datum/intent/sword/peel/light)
-	gripped_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike, /datum/intent/sword/peel/light)
-	alt_intents = list(/datum/intent/sword/strike, /datum/intent/sword/bash, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike, /datum/intent/sword/peel)
+	gripped_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike, /datum/intent/sword/peel)
 	smeltresult = /obj/item/ingot/iron //Sidegrade of the longswords and battle axes - non-blunt attacks hit harder, but are always telegraphed and swing-delayed.
 
 /obj/item/rogueweapon/sword/long/broadsword/bronze
@@ -494,18 +466,20 @@
 	wdefense_wbonus = 3
 	max_blade_int = 295 //Inverse. Sharper..
 	max_integrity = 125 //..but weaker.
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike, /datum/intent/sword/peel)
+	gripped_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike, /datum/intent/sword/peel)
 	smeltresult = /obj/item/ingot/bronze //Like before, it falls under the unofficial 'broadsword' category with one-handed chops. Best to pack a shield!
 
 /obj/item/rogueweapon/sword/long/broadsword/steel
 	name = "steel broadsword"
-	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
-	swordsmen of Beowricke in their clashes against man-and-monster alike since time immemmorial. Valoria's watchmen are renowned for \
-	their use of these steel-bladed iterations: an expensive necessity, in order to lay their undying besiegers to rest for good."
+	desc = "A lethal and well-balanced weapon. The broadsword has dutifully served the swordsmen of Beowricke in their clashes against man-and-monster alike since time immemmorial. Valoria's watchmen are renowned for their use of these steel-bladed iterations: an expensive necessity, in order to lay their undying besiegers to rest for good."
 	icon_state = "sbroadsword"
 	sheathe_icon = "sbroadsword"
 	max_blade_int = 330 //Sharper than a longsword, but with reduced defense. The use of steel balances its integrity out with a slight +10 bonus.
 	max_integrity = 160 
 	wdefense_wbonus = 3
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike, /datum/intent/sword/peel)
+	gripped_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike, /datum/intent/sword/peel)
 	smeltresult = /obj/item/ingot/steel
 
 ////////////////////////
@@ -514,10 +488,9 @@
 
 /obj/item/rogueweapon/sword/long/triumph
 	name = "valorian longsword"
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This particular variant has a stouter crossguard and wider blade; a prevaling design \
-	from the preceding century, oft-mantled in the homes of now-retired adventurers."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This particular variant has a stouter crossguard and wider blade; a prevaling design from the preceding century, oft-mantled in the homes of now-retired adventurers."
 	icon = 'icons/roguetown/weapons/64.dmi'  //Framework for Triumph-purchasable longswords.
+	icon_state = "longsword_triumph"
 	icon_state = "longsword_triumph"
 
 /obj/item/rogueweapon/sword/long/triumph/getonmobprop(tag)
@@ -534,18 +507,16 @@
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/sword/long/triumph/rockhill
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This particular variant has a narrow crossguard and lengthened blade; the proportions \
-	of an ancient hero's claymore, resurrected through modern smithing techniques."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This particular variant has a narrow crossguard and lengthened blade: the proportions of an ancient hero's claymore, resurrected through modern smithing techniques."
+	icon_state = "longsword_rockhill"
 	icon_state = "longsword_rockhill"
 	sheathe_icon = "gensword"
 
 /obj/item/rogueweapon/sword/long/exe/rockhill //Alternate version of the Executioner Sword.
 	name = "valorian claymore"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This sharp-edged variant has a narrow crossguard and lengthened blade; the proportions \
-	of an ancient hero's claymore, resurrected through modern smithing techniques."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This particular variant has a narrow crossguard and lengthened blade: the proportions of an ancient hero's claymore, resurrected through modern smithing techniques."
+	icon_state = "longsword_rockhill"
 	icon_state = "longsword_rockhill"
 
 /obj/item/rogueweapon/sword/long/exe/rockhill/getonmobprop(tag)
@@ -564,10 +535,8 @@
 /obj/item/rogueweapon/sword/long/broadsword/steel/rockhill //Alternate version of the Broadsword.
 	name = "valorian broadsword"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
-	swordsmen of Beowricke in their clashes against man-and-monster alike since time immemmorial. The edge glimmers with the hopes \
-	and dreams of the Weeping God's children, imbuing your very soul with determination. ‎</br>‎‎ </br>'There's a light inside your \
-	soul, that’s still shining in the cold: the truth, the promise in our hearts.. ..don't forget, I'm with you in the dark.'"
+	desc = "A lethal and well-balanced weapon. The broadsword has dutifully served the swordsmen of Beowricke in their clashes against man-and-monster alike since time immemmorial. The edge glimmers with the hopes and dreams of the Weeping God's children, imbuing your very soul with determination. ‎</br>‎‎ </br>'There's a light inside your soul, that’s still shining in the cold: the truth, the promise in our hearts.. ..don't forget, I'm with you in the dark.'"
+	icon_state = "longsword_rockhill"
 	icon_state = "longsword_rockhill"
 
 /obj/item/rogueweapon/sword/long/broadsword/steel/rockhill/getonmobprop(tag)
@@ -584,18 +553,16 @@
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/sword/long/triumph/sabreguard
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This particular variant has a curved crossguard and stouter blade; hallmarks of nobility, \
-	whether professed atop a saiga or against a villain's edge."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This particular variant has a curved crossguard and stouter blade; hallmarks of nobility, whether professed atop a saiga or against a villain's edge."
+	icon_state = "longsword_sabreguard"
 	icon_state = "longsword_sabreguard"
 	sheathe_icon = "cutlass"
 
 /obj/item/rogueweapon/sword/long/kriegmesser/sabreguard //Alternative variant for the Kriegmesser.
 	name = "valorian greatsabre"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This broad-edged variant has a curved crossguard and stouter blade; hallmarks of nobility, \
-	whether professed atop a saiga or against a villain's edge."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This broad-edged variant has a curved crossguard and stouter blade; hallmarks of nobility, whether professed atop a saiga or against a villain's edge."
+	icon_state = "longsword_sabreguard"
 	icon_state = "longsword_sabreguard"
 	sheathe_icon = "cutlass"
 
@@ -613,18 +580,16 @@
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/sword/long/triumph/wideguard
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This particular variant has a widened crossguard, adored by lightly-armored mercenaries \
-	who cannot afford to leave a single riposte without interception."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This particular variant has a widened crossguard, adored by lightly-armored mercenaries who cannot afford to leave a single riposte without interception."
+	icon_state = "longsword_wideguard"
 	icon_state = "longsword_wideguard"
 	sheathe_icon = "opsysword"
 
 /obj/item/rogueweapon/sword/rapier/wideguard //Alternate variant for the Rapier.
 	name = "valorian greatrapier"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This well-honed variant has a widened crossguard, adored by lightly-armored mercenaries \
-	who cannot afford to leave a single riposte without interception."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This well-honed variant has a widened crossguard, adored by lightly-armored mercenaries who cannot afford to leave a single riposte without interception."
+	icon_state = "longsword_wideguard"
 	icon_state = "longsword_wideguard"
 	sheathe_icon = "opsysword"
 
@@ -642,18 +607,16 @@
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/sword/long/triumph/psycrucifix
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This particular variant has a psycruciformed crossguard; a masterwork, held in silent \
-	reverance by those who've vowed to never forget the ultimate sacrifice."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This particular variant has a psycruciformed crossguard; a masterwork, held in silent reverance by those who've vowed to never forget the ultimate sacrifice."
+	icon_state = "longsword_psycrucifix"
 	icon_state = "longsword_psycrucifix"
 	sheathe_icon = "opsysword"
 
 /obj/item/rogueweapon/sword/long/psysword/psycrucifix //Alternate variant for the Psydonic Longswords.
 	name = "valorian silver longsword"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This silvered variant has a psycruciformed crossguard; a masterwork, held in silent \
-	reverance by those who've vowed to never forget the ultimate sacrifice."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This silvered variant has a psycruciformed crossguard; a masterwork, held in silent reverance by those who've vowed to never forget the ultimate sacrifice."
+	icon_state = "longsword_psycrucifix"
 	icon_state = "longsword_psycrucifix"
 	sheathe_icon = "opsysword"
 
@@ -670,34 +633,11 @@
 			if("onbelt")
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
-/obj/item/rogueweapon/sword/iron/triumph
-	name = "valorian arming sword"
-	desc = "A modest take on a mythical design, hailing from the blood-splattered crossroads \
-	between Valoria and Rockhill. It feels right at home, in the palm of your hand."
-	icon_state = "iswordalt"
-	sheathe_icon = "iswordalt"
-
-/obj/item/rogueweapon/sword/short/messer/iron/virtue/triumph
-	name = "valorian sword"
-	desc = "A modest take on a mythical design, hailing from the blood-splattered crossroads \
-	between Valoria and Rockhill. The flangs along its crossguard excel at catching the strikes \
-	of another, leaving them unable to persist against the following riposte."
-	icon_state = "iswordalt"
-	sheathe_icon = "iswordalt"
-
-/obj/item/rogueweapon/sword/falchion/militia/triumph
-	name = "valorian messer"
-	desc = "A modest take on a mythical design, hailing from the blood-splattered crossroads \
-	between Valoria and Rockhill. Rumors purport that mercenaries would intentionally chip the \
-	edge of these blades, as the crude serrations left behind could rend goblin-flesh with far more potency."
-	icon_state = "iswordalt"
-	sheathe_icon = "iswordalt"
-
 ////////////////////////
 
 /obj/item/rogueweapon/sword/long/training
 	name = "training sword"
-	desc = "Swords like these, with blunted tips and dull edges, are often used for practice without much risk of injury."
+	desc = "Swords like these -- with blunted tips and dull edges -- are often used for practice without much risk of injury."
 	force = 7
 	force_wielded = 15
 	sharpness = IS_BLUNT
@@ -709,14 +649,14 @@
 
 /obj/item/rogueweapon/sword/long/church
 	name = "see longsword"
-	desc = "A blessed longsword, wielded by the Holy See's templars in their stalwart defense against evil. Originating in the wake of the Celestial Empire's collapse, legends say that it is the grandfather to longswords all across Beowricke: the triumph of an ancient Malumite priest, stricken with divine inspiration in humenity's darkest hour. Centuries later, it still remains the ideal choice for skewering infidels and monsters alike. </br>'I am the holder of light, in the dark abyss..' </br>'..I am the holder of order and ward against vileness..' </br>'..let the Gods guide my hand, and let the Inhumen cower before me.'"
+	desc = "A blessed longsword, wielded by the Holy See's templars in their stalwart defense against evil. Originating in the wake of the Celestial Empire's collapse, legends say that it is the grandfather to longswords all across Beowricke: the triumph of an ancient Malumite priest, stricken with divine inspiration in humanity's darkest hour. Centuries later, it still remains the ideal choice for skewering infidels and monsters alike. </br>'I am the holder of light, in the dark abyss..' </br>'..I am the holder of order and ward against vileness..' </br>'..let the Gods guide my hand, and let the Inhumen cower before me.'"
 	icon_state = "churchsword"
 	max_blade_int = 250
 	max_integrity = 180
 
 /obj/item/rogueweapon/sword/long/undivided
 	name = "decablade"
-	desc = "A blessed longsword, held by the Holy See's templars in their stalwart defense against evil. The golden crossguard bares the winged motif of an angel, and psalms from the Pantheon's holy tome have been meticulously carved along the blade's edge. </br>'With a drop of holy Eclipsum, doth the blade rise..' </br>'..gilded, gleaming, radiant heat, warm my soul, immolate my enemies..' </br>'..and let me vanquish all those who would dare to Divide us, once more.'"
+	desc = "A blessed longsword, held by the Mother Church's templars in their stalwart defense against evil. The golden crossguard bares the winged motif of an angel, and psalms from the Pantheon's holy tome have been meticulously carved along the blade's edge. </br>'With a drop of holy Eclipsum, doth the blade rise..' </br>'..gilded, gleaming, radiant heat, warm my soul, immolate my enemies..' </br>'..and let me vanquish all those who would dare to Divide us, once more.'"
 	icon_state = "eclipsum"
 	sheathe_icon = "eclipsum"
 	max_blade_int = 250
@@ -932,12 +872,11 @@
 	smeltresult = /obj/item/ingot/steel
 	sellprice = 999
 	static_price = TRUE
-	max_integrity = 999
-	max_blade_int = 9999
+	max_integrity = 9999
 
 /obj/item/rogueweapon/sword/long/judgement/vlord
 	name = "\"Ichor Fang\""
-	desc = "An unholy longsword, who's crystalline blade radiates with insurmountable sharpness. It has been brought forth unto this world for a singular purpose; not to bring peace, but to dominate all who'd dare to oppose the coming darkness. ‎</br>‎‎ </br>'And I looked, and beheld a pale horse - the name that sat upon Her was Death, and Hell followed with them.'"
+	desc = "An unholy longsword, whose crystalline blade radiates with insurmountable sharpness. It has been brought forth unto this world for a singular purpose: not to bring peace, but to dominate all who'd dare to oppose the coming darkness. ‎</br>‎‎ </br>'And I looked, and beheld a pale horse - the name that sat upon Her was Death, and Hell followed with them.'"
 	force = 40
 	force_wielded = 55
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/peel)
@@ -945,7 +884,6 @@
 	icon_state = "vlord"
 	item_state = "vlord"
 	wbalance = WBALANCE_NORMAL
-	max_blade_int = 666
 	max_integrity = 9999
 	sellprice = 777
 	static_price = TRUE
@@ -966,7 +904,7 @@
 
 /obj/item/rogueweapon/sword/long/marlin
 	name = "shalal saber"
-	desc = "A large yet surprisingly agile curved blade meant to be wielded in two hands. It has a similar composition to northwestern Beowricken longswords, but it's notably lighter."
+	desc = "A large yet surprisingly agile curved blade meant to be wielded in two hands. It has a similar composition to western Beowricke's longswords, but it's notably lighter."
 	force = 26
 	force_wielded = 31
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/strike, /datum/intent/sword/peel)
@@ -994,35 +932,30 @@
 //Slightly more expensive than a longsword by 1 iron, so gets to be slightly better.
 /obj/item/rogueweapon/sword/long/exe
 	name = "executioners sword"
-	desc = "A heavy broadsword with a terrifyingly sharp edge, purpose-made to part heads from shoulders. Owing to its nature as a weapon of justice, it lacks the piercing tips that befit most battle-ready broadswords. If you're strong enough to wield such a weapon, however, then that probably won't stop you from finding a way."
-	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword/heavy, /datum/intent/sword/thrust/exe/heavy, /datum/intent/sword/cut)
-	alt_intents = null
+	desc = "A heavy and broad sword with a terrifyingly sharp edge, purpose-made to part heads from shoulders. Owing to its nature as a weapon of justice, it lacks the piercing tips that befit most battle-ready broadswords. If you're strong enough to wield such a weapon, however, then that probably won't stop you from finding a way."
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/long/broadsword/lesser, /datum/intent/sword/strike)
+	gripped_intents = list(/datum/intent/rend, /datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe)
 	icon_state = "exe"
 	minstr = 12
 	slot_flags = ITEM_SLOT_BACK
-	swingsound = BLADEWOOSH_HUGE
 	smeltresult = /obj/item/ingot/iron
 	max_blade_int = 330 
 	smelt_bar_num = 2 // 1 bar loss
 	vorpal = TRUE // snicker snack this shit cuts heads off effortlessly (DO NOT PUT THIS ON ANYTHING ELSE UNLESS IT'S SUPER FUCKING RARE!!!)
-	mordhau = FALSE
 
 /datum/intent/sword/thrust/exe
 	swingdelay = 4	//Slight delay to stab; big and heavy.
 	penfactor = BLUNT_DEFAULT_PENFACTOR //Flat tip? I don't know, man. This intent is won't penetrate anything but it damages armor more.
 	intent_intdamage_factor = 1.3 //This is basically like getting hit by a mace.
 
-/datum/intent/sword/thrust/exe/heavy
-	swingdelay = 6
-	damfactor = 1.1
-
 /obj/item/rogueweapon/sword/long/exe/astrata
 	name = "\"Solar Judge\""
 	desc = "An incredibly unusual executioner's sword clad in gold and brass. Two separate blades protude outwards and join near its intricately decorated crossguard. This weapon calls for order."
 	icon_state = "astratasword"
 	max_integrity = 200
-	vorpal = TRUE
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/long/broadsword/lesser, /datum/intent/sword/strike)
+	gripped_intents = list(/datum/intent/rend, /datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe)
+	vorpal = TRUE // snicker snack this shit cuts heads off effortlessly (DO NOT PUT THIS ON ANYTHING ELSE UNLESS IT'S SUPER FUCKING RARE!!!)
 
 /obj/item/rogueweapon/sword/long/exe/getonmobprop(tag)
 	. = ..()
@@ -1040,11 +973,8 @@
 /obj/item/rogueweapon/sword/long/exe/cloth
 	icon_state = "terminusest"
 	name = "\"Terminus Est\""
-	desc = "An ornate executioner's sword, decorated with a golden pommel and crossguard. A bloody rag \
-	winds around the ricasso, ever-present to keep its edge spotless for the executionee's final \
-	judgement. The stout-angled blade bares an enscription along its length; </br>'WHEN THIS SWORDE I DOTH LYFT, I WISH THE SINNER ETERNAL LYFE AS THINE GYFT.'"
+	desc = "An ancient and damaged executioner's sword, decorated with a bronze pommel and crossguard. A bloody rag winds around the ricasso, ever-present to keep the blade clean."
 	smeltresult = /obj/item/ingot/gold // It is the most valuable component
-	max_blade_int = 363 
 	smelt_bar_num = 2
 
 /obj/item/rogueweapon/sword/long/exe/cloth/rmb_self(mob/user)
@@ -1054,49 +984,17 @@
 	user.visible_message(span_warning("[user] wipes [src] down with its cloth."),span_notice("I wipe [src] down with its cloth."))
 	return
 
-//
-
-/obj/item/rogueweapon/sword/long/exe/silver
-	name = "silver executioners sword"
-	desc = "A thorned executioner's sword, who's massive silver blade lays mounted atop an intricately-carved \
-	handle. Though the barbs dig into your hands, it's said that such pricklings will only draw blood if the \
-	silvered edge falls upon the neck of the innocent."
-	icon_state = "psygsword"
-	force = 22
-	force_wielded = 25
-	minstr_req = TRUE
-	smeltresult = /obj/item/ingot/silver
-
-/obj/item/rogueweapon/sword/long/exe/silver/ComponentInitialize()
-	AddComponent(\
-		/datum/component/silverbless,\
-		pre_blessed = BLESSING_NONE,\
-		silver_type = SILVER_TENNITE,\
-		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 100,\
-		added_def = 2,\
-	)
-
-/datum/anvil_recipe/weapons/silver/exec
-	name = "Executioners Sword, Silver (+3 Silver, +1 Small Log)"
-	req_bar = /obj/item/ingot/silver
-	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/sword/long/exe/silver
-
-//
-
 /obj/item/rogueweapon/sword/long/exe/berserk
 	name = "berserkers sword"
 	desc = "A raw heap of iron, hewn into an intimidatingly massive cleaver. Most could never aspire to effectively swing such a laborsome blade about; those few that have the strength, however, can force even the strongest opponents to stagger back."
 	icon = 'icons/roguetown/weapons/swords64.dmi'
 	icon_state = "dragonslayer"
-	possible_item_intents = list(/datum/intent/sword/chop/broadsword/heavy, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/sword/chop/cleave, /datum/intent/rend, /datum/intent/sword/cut, /datum/intent/sword/thrust/long/broadsword)
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/long/broadsword/lesser, /datum/intent/sword/strike)
+	gripped_intents = list(/datum/intent/sword/chop/cleave, /datum/intent/rend, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe)
 	wbalance = WBALANCE_HEAVY //Stronger but sturdier executioner's sword, exchanging its peelage for an armor-piercing variant of Ansari's knockback variable.
+	alt_intents = null 
 	minstr = 13 //Should be uncraftable, but obtainable through other variants. Challenge classes, dungeon rewards?
 	wdefense = 9
-	minstr_req = TRUE
 	max_blade_int = 400
 
 /obj/item/rogueweapon/sword/long/exe/berserk/dragonslayer
@@ -1110,7 +1008,7 @@
 	max_integrity = 777
 	max_blade_int = 777
 	is_silver = TRUE
-	smeltresult = /obj/item/rogueweapon/sword/long/exe/berserk //How many forges does it take to get to the center of a superweapon?
+	smeltresult = /obj/item/rogueweapon/greatsword/silver //How many forges does it take to get to the center of a superweapon?
 
 /obj/item/rogueweapon/sword/long/exe/berserk/dragonslayer/ComponentInitialize()
 	AddComponent(\
@@ -1125,7 +1023,7 @@
 
 /obj/item/rogueweapon/sword/long/oldpsysword
 	name = "enduring longsword"
-	desc = "A steel longsword with an angled crossguard. The lesser clerics of the Psydonic Orders oft-carry these blades, and - though it may not carry the bite of silver - it still humbles men and monsters alike with a well-poised strike."
+	desc = "A steel longsword with an angled crossguard. The lesser clerics of the Holy Valorian Inquisition oft-carry these blades, and - though it may not carry the bite of silver - it still humbles men and monsters alike with a well-poised strike."
 	icon_state = "opsysword"
 	sheathe_icon = "opsysword"
 	dropshrink = 1
@@ -1194,15 +1092,14 @@
 	desc = "A two-handed broadsword, fitted with a blade of pure silver. Each swing commands more effort than the last, but not without purpose. One blow to crack the deadite's leg in twain; and a heartbeat later, another to splatter the soil with bile and teeth."
 	icon_state = "silverbroadsword"
 	sheathe_icon = "psysword"
-	swingsound = BLADEWOOSH_HUGE
 	force = 20
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
-	possible_item_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike)
-	alt_intents = list(/datum/intent/sword/strike, /datum/intent/sword/bash, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
-	mordhau = TRUE
+	possible_item_intents = list(/datum/intent/sword/cut/krieg, /datum/intent/sword/chop/falx, /datum/intent/sword/strike, /datum/intent/rend/krieg)
+	gripped_intents = list(/datum/intent/sword/cut/krieg, /datum/intent/sword/thrust/krieg, /datum/intent/sword/strike, /datum/intent/rend/krieg)
+	alt_intents = null // Can't mordhau this
+	mordhau = FALSE
 	smeltresult = /obj/item/ingot/silver
 	is_silver = TRUE
 
@@ -1219,18 +1116,17 @@
 
 /obj/item/rogueweapon/sword/long/kriegmesser/psy
 	name = "psydonic broadsword"
-	desc = "Sunder, cleave, smite; a sea of coagulated blackness, speckled with crimson. Absolve, cherish, endure; the will of one, christened to save Psydonia when all else is lost. </br>'Even here it is not safe, and even this grave has been defaced. Yet, someone has written on this stone, in some angry hand - 'HOPE RIDES ALONE..'"
+	desc = "Sunder, cleave, smite; a sea of coagulated blackness, speckled with crimson. Absolve, cherish, endure; the will of one, christened to save Beowricke when all else is lost. </br>'Even here it is not safe, and even this grave has been defaced. Yet, someone has written on this stone, in some angry hand - HOPE RIDES ALONE..'"
 	icon_state = "silverbroadsword"
 	sheathe_icon = "psysword"
-	swingsound = BLADEWOOSH_HUGE
 	force = 20
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
-	possible_item_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike)
-	alt_intents = list(/datum/intent/sword/strike, /datum/intent/sword/bash, /datum/intent/effect/daze, /datum/intent/sword/cut/broadsword)
-	mordhau = TRUE
+	possible_item_intents = list(/datum/intent/sword/cut/krieg, /datum/intent/sword/chop/falx, /datum/intent/sword/strike, /datum/intent/rend/krieg)
+	gripped_intents = list(/datum/intent/sword/cut/krieg, /datum/intent/sword/thrust/krieg, /datum/intent/sword/strike, /datum/intent/rend/krieg)
+	alt_intents = null // Can't mordhau this
+	mordhau = FALSE
 	smeltresult = /obj/item/ingot/silverblessed
 	is_silver = TRUE
 
@@ -1260,8 +1156,8 @@
 	grid_height = 96
 
 /obj/item/rogueweapon/sword/short/yanshen
-	name = "steel kodachi"
-	desc = "A razor-edged sword with a wavy pattern weld apparent on its blade."
+	name = "steel short dao"
+	desc = "A razor-edged sword with a strange toothy pattern apparent on its blade. </br> A duandao is a general term for a short single-edged blade in the lands of the Yanshen, though ones short as this are generally only used by noncombatants looking to keep trouble away... or troublemakers trying to blend in."
 	possible_item_intents = list(
 		/datum/intent/sword/cut/short,
 		/datum/intent/sword/thrust/short,
@@ -1297,14 +1193,14 @@
 
 /obj/item/rogueweapon/sword/short/pashortsword
 	name = "ancient shortsword"
-	desc = "A polished sidearm-sword, forged from gilbranze. From after His sacrifice, but before Her ascension; the tithe of a war without reason, waged between squabbling children who hadn't known that the world was about to end."
+	desc = "A polished-yet-patina'd sidearm-sword, forged from gilbranze. Whoever cared for this blade died long ago, yet here it is."
 	icon_state = "ashortsword"
 	sheathe_icon = "ashortsword"
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/sword/short/falchion
 	name = "falchion"
-	desc = "A single-edged sword that is similar to a messer in appearance, its origins trace back to Valoria. An implement of commoners and knights alike. It's good for cutting and thrusting."
+	desc = "A single-edged wide sword that is similar to a messer in appearance, its origins trace back to Valoria. An implement of commoners and knights alike. It's good for cutting while still being able to thrust."
 	force = 20
 	icon_state = "falchion"
 	wdefense = 6
@@ -1313,7 +1209,7 @@
 
 /obj/item/rogueweapon/sword/short/gladius
 	name = "gladius"
-	desc = "A hefty blade of bronze, sharp enough to disembowel and decapitate with-but a lone hand's force. Psydonia's ancient champions drove back the Archdevil's hordes with these shortswords, a thousand years ago; yet now, the end has crept forth to threaten lyfe once more. Move with the grace of your ancestors - spread your feet, brace your grasp, and make them bleed for every step they take."
+	desc = "A hefty blade of bronze, sharp enough to disembowel and decapitate with-but a lone hand's force. Beowricke's ancient champions fought with these, now: move with the grace of your ancestors - spread your feet, brace your grasp, and make them bleed for every step they take."
 	icon_state = "gladius"
 	sheathe_icon = "gladius"
 	max_integrity = 250
@@ -1323,7 +1219,7 @@
 
 /obj/item/rogueweapon/sword/short/gladius/decorated
 	name = "decorated gladius"
-	desc = "A beautiful depiction of justice, beflowered and besilked. The crimson engravings along its blade pay tribute to the ancient epics of Ravox's ascent to godlihood; for it was His wounding of the Sinistar's tentacled heart that forced the Archdevil to pause - first in disbelief, then in fascination."
+	desc = "A beautiful depiction of justice, beflowered and besilked. The crimson engravings along its blade pay tribute to the ancient epics, their tales sprawling the length of the blade"
 	icon_state = "gladiusdec"
 	sheathe_icon = "decgladius"
 	max_integrity = 300
@@ -1404,7 +1300,7 @@
 
 /obj/item/rogueweapon/sword/short/silver
 	name = "silver shortsword"
-	desc = "A shortsword with a blade of pure silver. In the marginalia of tomes depicting Psydonia's crusading orders, there is no sight more iconic than that of the hauberk-draped paladin; a kite shield in one hand, and this glimmering sidearm in the other."
+	desc = "A shortsword with a blade of pure silver. In the marginalia of tomes depicting Beowricke's crusading orders, there is no sight more iconic than that of the hauberk-draped paladin; a kite shield in one hand, and this glimmering sidearm in the other."
 	icon = 'icons/roguetown/weapons/daggers32.dmi'	
 	icon_state = "silverswordshort"
 	sheathe_icon = "psyswordshort"
@@ -1429,10 +1325,8 @@
 
 /obj/item/rogueweapon/sword/short/messer
 	name = "messer"
-	desc = "A \"Großesmesser\" of disputed Grenzel origin, meaning greatknife. It's a basic single-edge sword for civilian and military use. It excels at slicing and chopping, and it's made of steel. \
-	It can fill the exact function of a hunting sword, this one is more durable."
+	desc = "A \"Großesmesser\" of disputed Grenzel origin, meaning greatknife. It's a basic single-edge sword for civilian and military use. It excels at slicing and chopping, and it's made of steel. It can fill the same function as a hunting sword, though this one is more durable."
 	icon_state = "smesser"
-	sheathe_icon = "smesser"
 	force = 22	//Same damage as the iron messer
 	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/thrust, /datum/intent/axe/chop, /datum/intent/sword/peel)
 	minstr = 5
@@ -1440,16 +1334,13 @@
 
 /obj/item/rogueweapon/sword/short/messer/duelist
 	name = "dueling messer"
-	sheathe_icon = "smesser"
 	swingsound = BLADEWOOSH_SMALL
 	wbalance = WBALANCE_SWIFT
 
 /obj/item/rogueweapon/sword/short/messer/iron
 	name = "hunting sword"
-	desc = "A basic single-edge sword that is usually used to finish off hunted game. It excels at slicing and chopping, and it's made of iron. \
-	It's a fairly reliable and affordable self-defense weapon."
+	desc = "A basic single-edge sword that is usually used to finish off hunted game. It excels at slicing and chopping, and it's made of iron. It's a fairly reliable and affordable self-defense weapon."
 	icon_state = "imesser"
-	sheathe_icon = "imesser"
 	minstr = 4
 	wdefense = 2
 	wlength = WLENGTH_NORMAL
@@ -1457,30 +1348,21 @@
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = 100
 	sellprice = 10
+	sheathe_icon = "isword"
 
 /obj/item/rogueweapon/sword/short/messer/iron/virtue
 	name = "iron dueling messer"
 	desc = "A basic single-edge iron hunting sword that has been modified for the express purpose of dueling, with an added guard and a leaner grip for comfort and speed."
 	icon_state = "dmesser"
-	sheathe_icon = "dmesser"
 	swingsound = BLADEWOOSH_SMALL
 	wdefense = 3
 	wbalance = WBALANCE_SWIFT
-
-/obj/item/rogueweapon/sword/short/messer/alt
-	name = "steel hunting sword"
-	desc = "A noble single-edge sword that can hack through a saiga's neck like timberwood. It excels at slicing and chopping, and it's made of steel. \
-	It's a reliable self-defense weapon, and a status symbol amongst the peasantry; if a yeoman has this upon their hip, they mean business."
-	icon_state = "smesseralt"
-	sheathe_icon = "smesseralt"
-	wdefense = 3
 
 /obj/item/rogueweapon/sword/short/messer/copper
 	name = "copper messer"
 	desc = "A copper hunting sword. Less lethal than its iron counterpart."
 	force = 20 // Worse force. This weapon has steel integ instead of iron integ. Don't ask me why, it was that way before too.
 	icon_state = "cmesser"
-	sheathe_icon = "cmesser"
 	minstr = 4
 	wdefense = 2
 	smeltresult = /obj/item/ingot/copper
@@ -1515,8 +1397,7 @@
 
 /obj/item/rogueweapon/sword/saber/iron
 	name = "iron saber"
-	desc = "A sword mass produced for line infantry. Its fittings are simple, munitions grade, but the construction is sturdy and the blade as threatening \
-	as any."
+	desc = "A sword mass produced for line infantry. Its fittings are simple, munitions grade, but the construction is sturdy and the blade as threatening as any."
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = 100
 	icon_state = "isaber"
@@ -1556,7 +1437,7 @@
 
 /obj/item/rogueweapon/sword/sabre/freifechter
 	name = "szöréndnížine sabre"
-	desc = "A rare, specialty-made sabre domestic to Szöréndnížina, made similarly to those of the Potentate's Hussars. It has a large, open hilt with a cross-shaped guard formed from quillons and langets and a heavy curved blade. A chain is attached to the crossguard and into the pommel, protecting the hand. Unlike shorter and ligther sabres, it's large enough to reach the feet."
+	desc = "A rare, specialty-made sabre domestic to Szöréndnížina, made similarly to those of the Potentate's Hussars. It has a large, open hilt with a cross-shaped guard formed from quillons and langets and a heavy curved blade. A chain is attached to the crossguard and into the pommel, protecting the hand. Unlike shorter and lighter sabres, this one is long enough to reach the feet."
 	icon = 'icons/roguetown/weapons/special/freifechter.dmi'
 	possible_item_intents = list(/datum/intent/sword/cut/sabre/master, /datum/intent/sword/thrust/sabre, /datum/intent/effect/daze/freisabre, /datum/intent/rend)
 	wdefense = 7
@@ -1576,7 +1457,7 @@
 //Unique church sword - slightly better than regular sabre due to falx chop.
 /obj/item/rogueweapon/sword/sabre/nockhopesh
 	name = "moonlight khopesh"
-	desc = "A sickle-shaped sword of Khaliphate origin that owes its design to a type of battle axe its ancient settlers once used - it represents a symbol of power and conquest. This one in particular is made of blued steel."
+	desc = "A sickle-shaped sword of Khaliphate origin that owes its design to a type of battle axe its ancient settlers once used. Its shape represents a symbol of power and conquest to its native people. This one in particular is made of blued steel."
 	icon_state = "nockhopesh"
 	force = 25	//Base is 22
 	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/thrust, /datum/intent/sword/chop/falx, /datum/intent/sword/peel)
@@ -1596,7 +1477,7 @@
 
 /obj/item/rogueweapon/sword/sabre/palloy
 	name = "ancient khopesh"
-	desc = "A polished hook-sword, forged from gilbronze. The Comet Syon's glare once graced this blade; now, it's wielded by those who can't even remember what came before His sacrifice."
+	desc = "A polished-yet-patinaed hook-sword, forged from gilbronze. It carries the strength of an axe with the lengthy cutting edge of a sword, from the bowels of history into present conflict."
 	smeltresult = /obj/item/ingot/aaslag
 	icon_state = "akhopesh"
 
@@ -1668,9 +1549,7 @@
 
 /obj/item/rogueweapon/sword/rapier
 	name = "rapier"
-	desc = "A practically brand new sword type with a straight, slender and sharply pointed blade meant to be wielded in one hand. \
-		Originating as an unorthodox weapon in Valoria, its name comes from the term \"spada ropera\" (Literally \"dress sword\") due to its primary function being that of an accessory. \
-		A very young type of fighting technique for this weapon is emerging in the island, aptly named \"Destreza\" for dexterity."
+	desc = "A practically brand new sword type with a straight, slender and sharply pointed blade meant to be wielded in one hand. Originating as an unorthodox weapon in Valoria, its name comes from the term \"spada ropera\" (Literally \"dress sword\") due to its primary function being that of an accessory. A very young type of fighting technique for this weapon is emerging in its homeland, aptly named \"Destreza\" for dexterity."
 	icon = 'icons/roguetown/weapons/swords64.dmi'
 	icon_state = "rapier"
 	sheathe_icon = "rapier"
@@ -1792,7 +1671,7 @@
 
 /obj/item/rogueweapon/sword/rapier/silver
 	name = "silver rapier"
-	desc = "A basket-hilted rapier, fitted with a thin blade of pure silver. Immortalized by Rockhill's witch hunters, this weapon - though cumberstone in an untrained hand - is surprisingly adept at both parrying and riposting."
+	desc = "A basket-hilted rapier, fitted with a thin blade of pure silver. Immortalized by witch hunters, this weapon -- though cumberstone in an untrained hand -- is surprisingly adept at both parrying and riposting."
 	icon_state = "silverrapier"
 	sheathe_icon = "psyrapier"
 	max_integrity = 225
@@ -1878,9 +1757,7 @@
 
 /obj/item/rogueweapon/sword/rapier/lord
 	name = "sword of the Mad Duke"
-	desc = "A royal heirloom whose spiraling basket hilt is inlaid with fine cut gems. It bears the burnish of \
-	time, where once sharply defined features have been worn down by so many hands. An old rumor ties this implement \
-	to the siege that smashed the Mad Duke's keep to rubble, and burnt the Duke himself to cinders."
+	desc = "A royal heirloom whose spiraling basket hilt is inlaid with fine cut gems. It bears the burnish of time, where once sharply defined features have been worn down by so many hands. An old rumor ties this implement to the siege that smashed the Mad Duke's keep to rubble, and burnt the Duke himself to cinders."
 	icon_state = "lordrap"
 	sheathe_icon = "lordrapier"
 	sellprice = 150
@@ -1890,7 +1767,7 @@
 
 /obj/item/rogueweapon/sword/rapier/eora
 	name = "\"Heartstring\""
-	desc = "A specialty-made bilbo hilt rapier made in service to Lady Eora. For the time when soft words can no longer be spoken, and hearts are to be pierced."
+	desc = "A specialty-made bilbo hilt rapier made in service to Lady Eora. For the times when soft words can no longer be spoken, and hearts are to be pierced."
 	icon = 'icons/roguetown/weapons/swords32.dmi'
 	icon_state = "eorarapier"
 	sheathe_icon = "eorarapier"
@@ -1938,11 +1815,11 @@
 
 /obj/item/rogueweapon/sword/silver
 	name = "silver arming sword"
-	desc = "An arming sword, fitted with a blade of pure silver. It is the bane of vampyres, nitebeasts, and deadites throughout all of Psydonia; cursed flesh erupts into holy fire, and unholy bravado twists into mortal fear."
+	desc = "An arming sword, fitted with a blade of pure silver. It is the bane of vampyres, nitebeasts, and deadites throughout all of Beowricke; cursed flesh erupts into holy fire, and unholy bravado twists into mortal fear."
 	icon_state = "silversword"
 	sheathe_icon = "silversword"
-	force = 20
-	force_wielded = 25
+	force = 18
+	force_wielded = 23
 	minstr = 9
 	wdefense = 5
 	is_silver = TRUE
@@ -2438,7 +2315,7 @@
 
 /obj/item/rogueweapon/sword/gold
 	name = "golden arming sword"
-	desc = "A heavenly arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. This particular weapon seems to have innovatively combined the lethal cutting prowess of Psydonia's oldest weapon with the psychological damage of knowing that its wielder could likely bribe the Carriageman himself, and still chose to personally kill you."
+	desc = "A heavenly arming sword, whose golden blade and besilked handle lays separated by a duocruciformic crossguard. This particular weapon seems to have innovatively combined the lethal cutting prowess of Beowricke's oldest weapon with the psychological damage of knowing that its wielder could likely bribe the Carriageman himself, and still chose to personally kill you."
 	icon_state = "goldsword"
 	smeltresult = /obj/item/ingot/gold
 	force = 35
@@ -2454,7 +2331,7 @@
 
 /obj/item/rogueweapon/sword/gold/lordscepter
 	name = "\"Godshand\""
-	desc = "A royal arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. Nestled within its glistening bosom is a shard of Astrata's divinity authority; when reason fails to rank amongst rage, let Her speak for you. ‎</br>‎‎ </br>'..And I will strike down upon thee with great vengeance and furious anger - those who would attempt to poison and destroy my brothers. And you will know that I am the Lord when I lay my vengeance upon thee!'"
+	desc = "A royal arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. Nestled within its glistening bosom is a shard of Astrata's divine authority; when reason fails to rank amongst rage, let Her speak for you. ‎</br>‎‎ </br>'..And I will strike down upon thee with great vengeance and furious anger - those who would attempt to poison and destroy my brothers. And you will know that I am the Lord when I lay my vengeance upon thee!'"
 	icon_state = "goldswordking"
 	sheathe_icon = "goldswordking"
 	anvilrepair = /datum/skill/craft/weaponsmithing
@@ -2517,7 +2394,7 @@
 
 /obj/item/rogueweapon/sword/blacksteel
 	name = "blacksteel arming sword"
-	desc = "A broad blade of blacksteel, mounted to a rosawooden handle that perfectly compliments its wielder's grasp. It is the culmination of Psydonia's storied history with arming swords; a mastersmith's triumph, only fit for the hands of a true hero.. or a truer villain."
+	desc = "A broad blade of blacksteel, mounted to a rosawooden handle that perfectly compliments its wielder's grasp. It is the culmination of Beowricke's storied history with arming swords; a mastersmith's triumph, only fit for the hands of a true hero.. or a truer villain."
 	icon_state = "bs_sword"
 	sheathe_icon = "bs_sword"
 	smeltresult = /obj/item/ingot/blacksteel

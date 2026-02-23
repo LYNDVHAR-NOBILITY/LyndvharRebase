@@ -77,7 +77,7 @@
 	possible_item_intents = list(/datum/intent/lordbash, /datum/intent/lord_electrocute, /datum/intent/lord_silence)
 	gripped_intents = list(/datum/intent/lordbash)
 	name = "master's rod"
-	desc = "Bend the knee. Can't be used outside of the manor."
+	desc = "Bend the knee. </br>Can't be used outside of the manor."
 	icon_state = "scepter"
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	sharpness = IS_BLUNT
@@ -269,7 +269,7 @@
 	force = 24
 	possible_item_intents = list(/datum/intent/katar/cut, /datum/intent/katar/thrust, /datum/intent/sword/peel)
 	name = "katar"
-	desc = "A steel blade that sits above the user's fist. Commonly used by those proficient at unarmed fighting."
+	desc = "A foreign-design steel blade that sits above the user's fist. Commonly used by those proficient at unarmed fighting."
 	icon_state = "katar"
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	gripsprite = FALSE
@@ -310,7 +310,7 @@
 
 /obj/item/rogueweapon/katar/bronze
 	name = "bronze katar"
-	desc = "A bronze blade that sits above the user's fist. Commonly used by those proficient at unarmed fighting."
+	desc = "A foreign-design bronze blade that sits above the user's fist. Commonly used by those proficient at unarmed fighting."
 	icon_state = "bronzekatar"
 	force = 21 //-3 damage malus, same as the knuckles.
 	max_integrity = 80
@@ -318,7 +318,7 @@
 
 /obj/item/rogueweapon/katar/punchdagger
 	name = "punch dagger"
-	desc = "A weapon that combines the ergonomics of the Zybantine katar with the capabilities of the Beowricke \"knight-killers\". It can be tied around the wrist."
+	desc = "A weapon that combines the ergonomics of the Zybantine katar with the capabilities of the western rondel dagger. It can be tied around the wrist."
 	slot_flags = ITEM_SLOT_WRISTS
 	max_integrity = 120		//Steel dagger -30
 	force = 15		//Steel dagger -5
@@ -463,7 +463,7 @@
 
 /obj/item/rogueweapon/knuckles/eora
 	name = "close caress"
-	desc = "Some times call for a more intimate approach."
+	desc = "Sometimes, a more intimate approach is called for."
 	icon_state = "eoraknuckle"
 	force = 28 // lower this to 27 if its too much
 
@@ -690,7 +690,7 @@
 	possible_item_intents = list(SPEAR_BASH)
 	gripped_intents = list(/datum/intent/spear/cut/scythe, SPEAR_BASH, MACE_STRIKE)
 	name = "scythe"
-	desc = "The bane of fields, the trimmer of grass, the harvester of wheat, and - depending on who you ask - the shepherd of souls to the afterlyfe."
+	desc = "The bane of fields, the trimmer of grass, the harvester of wheat, and -- depending on who you ask -- the shepherd of souls to the afterlyfe."
 	icon_state = "peasantscythe"
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
 	pixel_y = -16
@@ -777,7 +777,6 @@
 	desc = "Fittingly coined as a 'peasant's falchion', this hunting sword's blade has been retempered to hunt the most dangerous game. Those jagged edges are perfect for tearing into flesh-and-maille."
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/strike)
 	icon_state = "maciejowski"
-	sheathe_icon = "maciejowski"
 	gripped_intents = list(/datum/intent/rend, /datum/intent/sword/chop/militia, /datum/intent/sword/peel, /datum/intent/sword/strike)
 	force = 18
 	force_wielded = 25
@@ -804,8 +803,7 @@
 /obj/item/rogueweapon/handclaw
 	slot_flags = ITEM_SLOT_HIP
 	name = "Iron Hound Claws"
-	desc = "A pair of heavily curved claws, styled after beasts of the wilds for rending bare flesh, \
-			A show of the continual worship and veneration of beasts of strength in Rhaenval."
+	desc = "A pair of heavily curved claws, styled after beasts of the wilds for rending bare flesh, A show of the continual worship and veneration of beasts of strength in Rhaenval."
 	icon_state = "ironclaws"
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	wdefense = 5
@@ -831,8 +829,7 @@
 
 /obj/item/rogueweapon/handclaw/steel
 	name = "Steel Mantis Claws"
-	desc = "A pair of steel claws, An uncommon sight in Rhaenval as they do not forge their own steel, \
-			Their longer blades offer a superior defence option but their added weight slows them down."
+	desc = "A pair of steel claws. An uncommon sight in Rhaenval as they do not forge their own steel. Their longer blades offer a superior defence option but their added weight slows them down."
 	icon_state = "steelclaws"
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	wdefense = 6
@@ -846,9 +843,7 @@
 
 /obj/item/rogueweapon/handclaw/rhaenval
 	name = "Rhaenish Beast Claws"
-	desc = "A pair of uniquely reinforced iron claws forged with the addition of bone by the Vruirid Shamans of the Steppe. \
-			Their unique design aids them in slipping between the plates in armor and their light weight supports rapid aggressive slashes. \
-			'To see the claws of the four, Is to see the true danger of the north. Not man, Not land but beast. We are all prey in their eyes.'"
+	desc = "A pair of uniquely reinforced iron claws forged with the addition of bone.'"
 	icon_state = "gronnclaws"
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	wdefense = 3
@@ -945,16 +940,15 @@
 	name = "peculate"
 	hitsound = null
 	desc = "Thieve the appearance of another."
-	icon_state = "inpeculate"
+	icon_state = "peculate"
 
 //Unique assassin/antag dagger.
 /obj/item/rogueweapon/huntingknife/idagger/steel/profane
 	name = "profane dagger"
-	desc = "A profane dagger made from a cursed alloy. Whispers emanate from the diamond on its hilt. </br>A chill rolls down my spine. I am not alone."
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/peculate, /datum/intent/dagger/thrust/pick)
+	desc = "A profane dagger made of cursed black steel. Whispers emanate from the gem on its hilt."
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/peculate)
 	sellprice = 250
-	icon_state = "graggardagger"
-	sheathe_icon = "graggardagger"
+	icon_state = "pdagger"
 	embedding = list("embed_chance" = 0) // Embedding the cursed dagger has the potential to cause duping issues. Keep it like this unless you want to do a lot of bug hunting.
 	resistance_flags = INDESTRUCTIBLE
 	stealthy_audio = TRUE
@@ -1119,9 +1113,7 @@
 // Big ol' flag that they keep to give bonuses, used by the manorguard standard bearer.
 /obj/item/rogueweapon/spear/keep_standard
 	name = "ducal standard"
-	desc = "The local lord's banner, fashioned to a blacksteel pike and turned into a deadly instrument of war. \
-	The man who wields this is said to bring great fortune to his house, and those who keep him safe. \
-	<small>Runes glow near the head of the pike. A sure sign of the arcyne.</small>"
+	desc = "The local lord's banner, fashioned to a blacksteel pike and turned into a deadly instrument of war. The man who wields this is said to bring great fortune to his house, and to those who keep him safe. <small>Runes glow near the head of the pike. A sure sign of the arcyne.</small>"
 	force = 15
 	force_wielded = 30
 	throwforce = 40 // It'll be funny. Trust.

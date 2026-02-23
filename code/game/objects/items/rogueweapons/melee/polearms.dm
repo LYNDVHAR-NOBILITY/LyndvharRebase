@@ -354,8 +354,7 @@
 
 /obj/item/rogueweapon/spear/trainer
 	name = "sparring spear"
-	desc = "An old dulled spear with a shaft worn by the hands of countless trainees before you. The fabric and watting wrap is meant to protect combatants, \
-	but getting hit with this still leaves welts and breaks fingers."
+	desc = "An old dulled spear with a shaft worn by the hands of countless trainees before you. The fabric and watting wrap is meant to protect combatants, but getting hit with this still leaves welts and breaks fingers."
 	icon_state = "spear_trainer"
 	possible_item_intents = list(SPEAR_BASH)
 	gripped_intents = list(SPEAR_BASH,/datum/intent/mace/smash/wood)
@@ -452,7 +451,7 @@
 
 /obj/item/rogueweapon/spear/aalloy
 	name = "decrepit spear"
-	desc = "A rotting staff, tipped with frayed bronze. After the stone, but before the sword; an interlude for the violence that would soon engulf His world."
+	desc = "A rotting staff, tipped with frayed bronze. After the stone, but before the sword; an interlude for the violence that would soon engulf this world."
 	icon_state = "ancient_spear"
 	force = 13
 	force_wielded = 22
@@ -472,7 +471,7 @@
 
 /obj/item/rogueweapon/spear/psyspear
 	name = "psydonic spear"
-	desc = "An ornate spear, plated in a ceremonial veneer of silver. The barbs pierce your palm, and - for just a moment - you see red. Never forget that you are why Psydon wept."
+	desc = "An ornate spear, plated in a ceremonial veneer of silver. The barbs pierce your palm, and - for just a moment - you see red. Never forget that you are why Psydon weeps."
 	icon_state = "psyspear"
 	force = 15
 	force_wielded = 25
@@ -495,7 +494,7 @@
 
 /obj/item/rogueweapon/spear/silver
 	name = "silver spear"
-	desc = "A winged staff, tipped with a silver spearhead. It bares a resemblenece to the 'boar spear', but with a critical difference; instead of stopping hogs, it halts charging deadites from spreading their sickness any further."
+	desc = "A winged staff, tipped with a silver spearhead. It bares a resemblenece to the 'boar spear', but with a critical difference; instead of stopping hogs, it halts unceasingly charging deadites from spreading their sickness any further."
 	icon_state = "silverspear"
 	force = 15
 	force_wielded = 25
@@ -565,7 +564,7 @@
 
 /obj/item/rogueweapon/spear/billhook
 	name = "billhook"
-	desc = "A neat hook. Used to pull riders from horses, as well as defend against said horses when used in a proper formation. The reinforcements along it's shaft grant it higher durability against attacks."
+	desc = "A neat hooked polearm, one that evolved from the common bill that is used to prune trees. Now used to pull riders from horses, as well as defend against said horses when used in a proper formation. The reinforcements along it's shaft grant it higher durability against attacks."
 	icon_state = "billhook"
 	smeltresult = /obj/item/ingot/steel
 	max_blade_int = 230
@@ -810,8 +809,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/spear/holysee
-	name = "see spear"
-	desc = "A blessed spear, wielded by the Holy See's templars to keep the forces of evil at bay. The design is remarkably well-balanced, allowing it for effective off-handed use with a shield. The prongs seem to catch even the tiniest glimmer of daelight, magnifying it into a blinding glare. </br>'I fear no evil, my Gods, for thou art with me!'"
+	name = "templar spear"
+	desc = "A blessed spear, wielded by the Mother Church's templars to keep the forces of evil at bay. The design is remarkably well-balanced, allowing it for effective off-handed use with a shield. The prongs seem to catch even the tiniest glimmer of daelight, magnifying it into a blinding glare. </br>'I fear no evil, my Gods, for thou art with me!'"
 	icon_state = "gsspear"
 	force = 25 // better in one hand. Use it with the shield.
 	max_blade_int = 225
@@ -821,7 +820,7 @@
 	possible_item_intents = list(/datum/intent/spear/thrust/eaglebeak, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
 	gripped_intents = list(/datum/intent/spear/cut/bardiche, /datum/intent/axe/chop/battle, SPEAR_BASH)
 	name = "bardiche"
-	desc = "A beautiful variant of the halberd. Its reinforced shaft provides it with greater durability against attacks."
+	desc = "A strangely shaped variant of pole axe, having its pole sit halfway through its very lengthy blade. Its reinforced shaft provides it with greater durability against attacks."
 	icon_state = "bardiche"
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/iron
@@ -844,7 +843,7 @@
 
 /obj/item/rogueweapon/halberd/bardiche/paalloy
 	name = "ancient bardiche"
-	desc = "A terrifying poleaxe, forged from polished gilbranze. When Her ascension came, these weapons - bereft of their wielders - sunk deep into the earth. Shadowed hands cradled the blades over the centuries, and would eventually create its steel-tipped successor; the glaive."
+	desc = "A terrifying poleaxe, forged from polished gilbranze. When Her ascension came, these weapons - bereft of their wielders - sunk deep into the earth."
 	icon_state = "ancient_bardiche"
 	smeltresult = /obj/item/ingot/aaslag
 
@@ -1003,7 +1002,7 @@
 
 /obj/item/rogueweapon/spear/bronze
 	name = "bronze spear"
-	desc = "An antiquital staff, adorned with a bronze spearhead. Ancient in both design and purpose, its lighter weight once complimented the towering shields of precivilizational legionnaires. While rarely seen beyond the Deadlands, nowadaes, its lightweight balance makes it perfect for one-handed thrusts and throws."
+	desc = "An antiquital staff, adorned with a bronze spearhead. Ancient in both design and purpose, its lighter weight once complimented the towering shields of precivilizational legionnaires. While rarely seen nowadaes, its lightweight balance makes it perfect for one-handed thrusts and throws."
 	force = 25
 	force_wielded = 28
 	throwforce = 30
@@ -1023,7 +1022,7 @@
 	alt_intents = list(/datum/intent/sword/strike, /datum/intent/sword/bash, /datum/intent/effect/daze)
 	mordhau = TRUE
 	name = "greatsword"
-	desc = "Might be able to chop anything in half!"
+	desc = "A great big sword. Might be able to chop anything in half!"
 	icon_state = "gsw"
 	parrysound = list(
 		'sound/combat/parry/bladed/bladedlarge (1).ogg',
@@ -1097,7 +1096,7 @@
 
 /obj/item/rogueweapon/greatsword/aalloy
 	name = "decrepit greatsword"
-	desc = "A massive blade, wrought in frayed bronze. It is too big to be called a sword; massive, thick, heavy, and far too rough. Indeed, this blade was more like a heap of raw metal."
+	desc = "A massive blade, wrought in frayed bronze. It is too big to be called a sword; massive, thick, heavy, and far too rough. Indeed, this blade is more like a heap of raw metal."
 	force = 10
 	force_wielded = 25
 	max_integrity = 150
@@ -1164,9 +1163,7 @@
 
 /obj/item/rogueweapon/greatsword/grenz/flamberge/ravox
 	name = "Censure"
-	desc = "A blade that invites imagery of hope. Of men clad in shattered plate and bearing blackened pauldrons, \
-	standing at His side. To correct Her wrongs, as they sought the censure of divine tyranny. \
-	<small>Even now, it smells of ash.</small>"
+	desc = "A blade that invites imagery of hope. Of men clad in shattered plate and bearing blackened pauldrons, standing at His side. To correct Her wrongs, as they sought the censure of divine tyranny. <small>Even now, it smells of ash.</small>"
 	icon_state = "ravoxflamberge"
 	max_integrity = 240
 	max_blade_int = 240
@@ -1174,9 +1171,7 @@
 
 /obj/item/rogueweapon/greatsword/grenz/flamberge/blacksteel
 	name = "blacksteel flamberge"
-	desc = "An uncommon kind of sword with a characteristically undulating style of blade, made with an equally rare metal. \
-	The wave in the blade is considered to contribute a flame-like quality to its appearance, turning it into a menacing sight. \
-	\"Flaming swords\" are often the protagonists of epics across Beowricke and other knights' tales."
+	desc = "An uncommon kind of sword with a characteristically undulating style of blade, made with an equally rare metal. The wave in the blade is considered to contribute a flame-like quality to its appearance, turning it into a menacing sight. \"Flaming swords\" are often the protagonists of epics across Beowricke and other knights' tales."
 	icon_state = "blackflamb"
 	force = 25
 	force_wielded = 40
@@ -1230,7 +1225,7 @@
 
 /obj/item/rogueweapon/greatsword/psygsword/relic
 	name = "Apocrypha"
-	desc = "In the Valorian mosaics, Psydon - bare in all but a beaked helmet and loincloth - is often depicted wielding such an imposing greatweapon against the Dark Star, Graggar. Regardless of whether this relic was actually wielded by divinity-or-not, its unparallel strength will nevertheless command even the greatest foes to fall."
+	desc = "In the Valorian mosaics, Psydon - bare in all but a beaked helmet and loincloth - is often depicted wielding such an imposing greatweapon against foul forces of evil. Regardless of whether this relic was actually wielded by divinity-or-not, its unparallel strength will nevertheless command even the greatest foes to fall."
 	force = 12
 	force_wielded = 30
 	icon_state = "psygsword"
@@ -1465,7 +1460,7 @@
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/steel
 	name = "steel quarterstaff"
-	desc = "A quarterstaff reinforced with steel tips and steel rings, blurring the line between a light polehammer and a reinforced quarterstaff. Extremely durable, and more than capable of bludgeoning brigands to death. Durable enough to break your opponents weapons."
+	desc = "A quarterstaff reinforced with steel tips and steel rings, blurring the line between a light polemace and a reinforced quarterstaff. Extremely durable, and more than capable of bludgeoning brigands to death. Durable enough to break your opponents weapons."
 	force = 18
 	force_wielded = 25
 	gripped_intents = list(/datum/intent/spear/bash/ranged/quarterstaff, /datum/intent/spear/thrust/quarterstaff)
@@ -1475,7 +1470,7 @@
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/silver
 	name = "silver quarterstaff"
-	desc = "A quarterstaff reinforced with silver tips. A relatively new design, purportedly inspired by the warstaffs oft-carried by Khaliphate Vaktasi-acolytes. Durable enough to catch avantyne to the shaft, without so much as a splinter - or so, they say."
+	desc = "A quarterstaff reinforced with silver tips. A relatively new design, purportedly inspired by the warstaffs oft-carried by Khaliphate Vaktasi-acolytes. Durable enough to catch avantyne to the shaft, without so much as a splinter -- or so they say."
 	force = 20
 	force_wielded = 27
 	gripped_intents = list(/datum/intent/spear/bash/ranged/quarterstaff, /datum/intent/spear/thrust/quarterstaff)
@@ -1497,7 +1492,7 @@
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/psy
 	name = "psydonic quarterstaff"
-	desc = "A quarterstaff reinforced with silver tips. A relatively new design, purportedly inspired by the warstaffs oft-carried by Khazumian Vaktasi-acolytes. Durable enough to catch avantyne to the shaft, without so much as a splinter - or so, they say."
+	desc = "A quarterstaff reinforced with silver tips. A relatively new design, purportedly inspired by the warstaffs oft-carried by Khazumian Vaktasi-acolytes. Durable enough to catch avantyne to the shaft, without so much as a splinter -- or so they say."
 	force = 20
 	force_wielded = 27
 	gripped_intents = list(/datum/intent/spear/bash/ranged/quarterstaff, /datum/intent/spear/thrust/quarterstaff)
@@ -1520,7 +1515,7 @@
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/gold
 	name = "golden quarterstaff"
-	desc = "The astute may point out that this staff is poorly designed. They would be correct. Gold, even low karat, is a bad material for a weapon. This one additionally manages to be doubly-sinned by having a heavy chunk of gold at the end. It's almost a polehammer. Practical? No. But it makes a statement."
+	desc = "The astute may point out that this staff is poorly designed. They would be correct. Gold, even low karat, is a bad material for a weapon. This one additionally manages to be doubly-sinned by having a heavy chunk of gold at the end. It's almost a polemace. Practical? No. But it makes a statement."
 	icon_state = "quarterstaff_gold"
 	force = 23
 	force_wielded = 30
@@ -1530,7 +1525,7 @@
 
 /obj/item/rogueweapon/spear/partizan
 	name = "partizan"
-	desc = "A reinforced spear-like polearm of disputed origin: A studded shaft fitted with a steel spearhead with protrusions to aid in parrying. An extremely recent invention that is seeing increasingly more usage in the Western lands."
+	desc = "A reinforced spear-like polearm with a studded shaft fitting a steel spearhead with protrusions to aid in parrying. An extremely recent invention that is seeing increasingly more usage in the Western lands."
 	force = 8	//Not a possible one-handed weapon. Also too heavy!
 	force_wielded = 30
 	possible_item_intents = list(SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
@@ -1555,8 +1550,7 @@
 
 /obj/item/rogueweapon/spear/boar
 	name = "boar spear"
-	desc = "A spear with a wide head and a pair of wings below the head. The wings are designed to prevent a boar from charging past the spearhead. \
-	It is also useful for parrying and stopping a charging opponent."
+	desc = "A spear with a wide head and a pair of wings below the head. The wings are designed -- with the hope -- that they'll prevent a boar from charging past the spearhead. It is also useful for parrying and stopping a charging opponent."
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
 	icon_state = "boarspear"
 	force_wielded = 33 // 10% base damage increase
@@ -1574,7 +1568,7 @@
 
 /obj/item/rogueweapon/spear/boar/frei/pike
 	name = "banner of Szöréndnížina"
-	desc = "A steel pike with a white and red banner made to spend the time flowing proudly in the wind. A city founded by the free. A State made from the disciplined. Snowy peaks surround her strong walls, her gates make any attack a suicide. Fight, Szöréndnížina. Fight to lyve in a world that rejects you."
+	desc = "A steel pike with a white and red banner made to spend time flowing proudly in the wind. A city founded by the free. A State made from the disciplined. Snowy peaks surround her strong walls, her gates make any attack a suicide. Fight, Szöréndnížina. Fight to lyve in a world that rejects you."
 	icon_state = "citybanner"
 	force = 18
 	force_wielded = 33
@@ -1588,8 +1582,7 @@
 
 /obj/item/rogueweapon/spear/lance
 	name = "lance"
-	desc = "A long polearm designed to be used from horseback, couched under the arm. It has a vambrace to prevent the arm sliding up \
-	the shaft on impact. "
+	desc = "A long polearm designed to be used from horseback, couched under the arm. It has a vambrace to prevent the arm sliding up the shaft on impact. "
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
 	icon_state = "lance"
 	force = 15 // Its gonna sucks for 1 handed use

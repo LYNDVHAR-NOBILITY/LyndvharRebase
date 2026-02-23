@@ -242,7 +242,7 @@
 
 /obj/item/rogueweapon/stoneaxe/battle/abyssoraxe
 	name = "Tidecleaver"
-	desc = "An axe made in image and inspiration of the rumored Tidecleaver, an axe capable of parting the ocean itself. The steel hums the crash of waves."
+	desc = "An axe made in image and inspiration of the rumored Tidecleaver, a relic capable of parting the ocean itself. The steel hums like the crash of waves upon impact."
 	icon_state = "abyssoraxe"
 	icon = 'icons/roguetown/weapons/axes32.dmi'
 	max_integrity = 400 // higher int than usual
@@ -358,7 +358,7 @@
 
 /obj/item/rogueweapon/stoneaxe/woodcut/steel/paaxe
 	name = "ancient alloy axe"
-	desc = "A hatchet of polished gilbranze. Vheslyn molested the hearts of Man with sin - of greed towards the better offerings, and of lust for His divinity. With a single blow, blood gouted from bone and seeped into the soil; the first murder."
+	desc = "A hatchet of polished gilbranze. Before history, someone some day at some time took their tool and swung it -- not at a tree, or anything of benefit. But at another thinking creature. With a single blow, blood gouted from a wound and seeped into the soil; the first murder."
 	icon_state = "ahandaxe"
 	smeltresult = /obj/item/ingot/aaslag
 
@@ -658,7 +658,7 @@
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/mace/strike) //When possible, add the longsword's 'alternate grip' mechanic to let people flip this around into a Mace-scaling weapon with swapped damage.
 	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe, /datum/intent/mace/rangedthrust, /datum/intent/mace/strike) //Axe-equivalent to the Godendag or Grand Mace.
 	name = "psydonic poleaxe"
-	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axhead of alloyed silver. As the fragility of swords've become more apparent, the Psydonic Orders - following the disastrous Massacre of Blastenghyll - have shifted their focus towards arming their paladins with longer-lasting greatweapons."
+	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axhead of alloyed silver. As the stark reality of the recent Ruby War has shown, there can be no such thing as 'excessive force' when dealing with an opponent."
 	icon_state = "silverpolearm"
 	minstr = 11
 	max_blade_int = 350

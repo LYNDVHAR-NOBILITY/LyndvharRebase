@@ -447,7 +447,7 @@
 
 /obj/item/quiver/javelin
 	name = "javelinbag"
-	desc = "A heavy, hip-hookable sleeve that can carry javelins. It has yet to reclaim the same love it once had, during the wars of pre-Syonic antiquity."
+	desc = "A heavy, hip-hookable sleeve that can carry javelins. It has yet to reclaim the same love it once had, during the wars of pre-history."
 	icon_state = "javelinbag0"
 	item_state = "javelinbag"
 	max_storage = 4

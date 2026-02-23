@@ -29,7 +29,7 @@
 
 /obj/structure/fluff/walldeco/painting
 	name = "painting"
-	desc = "The artist is unknown. The subject is unknown. Maybe a memorial to a corpse that was trampled on the trail to this reality."
+	desc = "The artist is unknown. The subject is unknown. Maybe a memorial to a corpse that was trampled on the trail to this reality?"
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "painting_deployed"
 	anchored = TRUE
@@ -47,26 +47,26 @@
 	..()
 
 /obj/structure/fluff/walldeco/painting/queen
-	desc = "It's Queen Samantha I of Enigma. Her late husband would be so proud of what she has accomplished in his realm."
+	desc = "It's the late Empress Camille of Lyndhardtia... did she ever wonder that her family's hold on the empire could've crumbled as quickly as it did?"
 	icon_state = "queenpainting_deployed"
 	stolen_painting = /obj/item/rogue/painting/queen
 
 /obj/item/rogue/painting/queen
 	icon_state = "queenpainting"
-	desc = "It's Queen Samantha I of Psydonia. Her late husband would be so proud of what she has accomplished in his realm. These mass-reproduced paintings are unfortunately devalued."
+	desc = "It's the late Empress Camille of Lyndhardtia... did she ever wonder that her family's hold on the empire could've crumbled as quickly as it did? These mass-reproduced paintings are unfortunately devalued."
 	dropshrink = 0.5
 	sellprice = 200
 	deployed_structure = /obj/structure/fluff/walldeco/painting/queen
 
 /obj/item/rogue/painting/seraphina
 	icon_state = "seraphinapainting"
-	desc = "It's holy priest Seraphina, first of her name, blessed be her name."
+	desc = "It's... well, it's someone... some founding member of the Mother Church... erh, blessed be her name, whatever it was..."
 	dropshrink = 0.5
 	sellprice = 200
 	deployed_structure = /obj/structure/fluff/walldeco/painting/seraphina
 
 /obj/structure/fluff/walldeco/painting/seraphina
-	desc = "It's holy priest Seraphina, first of her name, blessed be her name."
+	desc = "It's... well, it's someone... some founding member of the Mother Church... erh, blessed be her name, whatever it was..."
 	icon_state = "seraphinapainting_deployed"
 	stolen_painting = /obj/item/rogue/painting/seraphina
 
