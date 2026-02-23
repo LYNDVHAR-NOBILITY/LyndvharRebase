@@ -561,9 +561,7 @@
 /obj/item/rogueweapon/sword/long/kriegmesser/sabreguard //Alternative variant for the Kriegmesser.
 	name = "valorian greatsabre"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This broad-edged variant has a curved crossguard and stouter blade; hallmarks of nobility, \
-	whether professed atop a saiga or against a villain's edge."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This broad-edged variant has a curved crossguard and stouter blade; hallmarks of nobility, whether professed atop a saiga or against a villain's edge."
 	icon_state = "longsword_sabreguard"
 	icon_state = "longsword_sabreguard"
 	sheathe_icon = "cutlass"
@@ -590,9 +588,7 @@
 /obj/item/rogueweapon/sword/rapier/wideguard //Alternate variant for the Rapier.
 	name = "valorian greatrapier"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
-	all across Beowricke. This well-honed variant has a widened crossguard, adored by lightly-armored mercenaries \
-	who cannot afford to leave a single riposte without interception."
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths all across Beowricke. This well-honed variant has a widened crossguard, adored by lightly-armored mercenaries who cannot afford to leave a single riposte without interception."
 	icon_state = "longsword_wideguard"
 	icon_state = "longsword_wideguard"
 	sheathe_icon = "opsysword"
@@ -1213,7 +1209,7 @@
 
 /obj/item/rogueweapon/sword/short/gladius
 	name = "gladius"
-	desc = "A hefty blade of bronze, sharp enough to disembowel and decapitate with-but a lone hand's force. Beowricke's ancient champions drove back the Archdevil's hordes with these shortswords, a thousand years ago; yet now, the end has crept forth to threaten lyfe once more. Move with the grace of your ancestors - spread your feet, brace your grasp, and make them bleed for every step they take."
+	desc = "A hefty blade of bronze, sharp enough to disembowel and decapitate with-but a lone hand's force. Beowricke's ancient champions fought with these, now: move with the grace of your ancestors - spread your feet, brace your grasp, and make them bleed for every step they take."
 	icon_state = "gladius"
 	sheathe_icon = "gladius"
 	max_integrity = 250
@@ -1329,8 +1325,7 @@
 
 /obj/item/rogueweapon/sword/short/messer
 	name = "messer"
-	desc = "A \"Großesmesser\" of disputed Grenzel origin, meaning greatknife. It's a basic single-edge sword for civilian and military use. It excels at slicing and chopping, and it's made of steel. \
-	It can fill the exact function of a hunting sword, this one is more durable."
+	desc = "A \"Großesmesser\" of disputed Grenzel origin, meaning greatknife. It's a basic single-edge sword for civilian and military use. It excels at slicing and chopping, and it's made of steel. It can fill the same function as a hunting sword, though this one is more durable."
 	icon_state = "smesser"
 	force = 22	//Same damage as the iron messer
 	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/thrust, /datum/intent/axe/chop, /datum/intent/sword/peel)
@@ -1344,8 +1339,7 @@
 
 /obj/item/rogueweapon/sword/short/messer/iron
 	name = "hunting sword"
-	desc = "A basic single-edge sword that is usually used to finish off hunted game. It excels at slicing and chopping, and it's made of iron. \
-	It's a fairly reliable and affordable self-defense weapon."
+	desc = "A basic single-edge sword that is usually used to finish off hunted game. It excels at slicing and chopping, and it's made of iron. It's a fairly reliable and affordable self-defense weapon."
 	icon_state = "imesser"
 	minstr = 4
 	wdefense = 2
@@ -1403,8 +1397,7 @@
 
 /obj/item/rogueweapon/sword/saber/iron
 	name = "iron saber"
-	desc = "A sword mass produced for line infantry. Its fittings are simple, munitions grade, but the construction is sturdy and the blade as threatening \
-	as any."
+	desc = "A sword mass produced for line infantry. Its fittings are simple, munitions grade, but the construction is sturdy and the blade as threatening as any."
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = 100
 	icon_state = "isaber"
@@ -1444,7 +1437,7 @@
 
 /obj/item/rogueweapon/sword/sabre/freifechter
 	name = "szöréndnížine sabre"
-	desc = "A rare, specialty-made sabre domestic to Szöréndnížina, made similarly to those of the Potentate's Hussars. It has a large, open hilt with a cross-shaped guard formed from quillons and langets and a heavy curved blade. A chain is attached to the crossguard and into the pommel, protecting the hand. Unlike shorter and ligther sabres, it's large enough to reach the feet."
+	desc = "A rare, specialty-made sabre domestic to Szöréndnížina, made similarly to those of the Potentate's Hussars. It has a large, open hilt with a cross-shaped guard formed from quillons and langets and a heavy curved blade. A chain is attached to the crossguard and into the pommel, protecting the hand. Unlike shorter and lighter sabres, this one is long enough to reach the feet."
 	icon = 'icons/roguetown/weapons/special/freifechter.dmi'
 	possible_item_intents = list(/datum/intent/sword/cut/sabre/master, /datum/intent/sword/thrust/sabre, /datum/intent/effect/daze/freisabre, /datum/intent/rend)
 	wdefense = 7
@@ -1464,7 +1457,7 @@
 //Unique church sword - slightly better than regular sabre due to falx chop.
 /obj/item/rogueweapon/sword/sabre/nockhopesh
 	name = "moonlight khopesh"
-	desc = "A sickle-shaped sword of Khaliphate origin that owes its design to a type of battle axe its ancient settlers once used - it represents a symbol of power and conquest. This one in particular is made of blued steel."
+	desc = "A sickle-shaped sword of Khaliphate origin that owes its design to a type of battle axe its ancient settlers once used. Its shape represents a symbol of power and conquest to its native people. This one in particular is made of blued steel."
 	icon_state = "nockhopesh"
 	force = 25	//Base is 22
 	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/thrust, /datum/intent/sword/chop/falx, /datum/intent/sword/peel)
@@ -1556,9 +1549,7 @@
 
 /obj/item/rogueweapon/sword/rapier
 	name = "rapier"
-	desc = "A practically brand new sword type with a straight, slender and sharply pointed blade meant to be wielded in one hand. \
-		Originating as an unorthodox weapon in Valoria, its name comes from the term \"spada ropera\" (Literally \"dress sword\") due to its primary function being that of an accessory. \
-		A very young type of fighting technique for this weapon is emerging in the island, aptly named \"Destreza\" for dexterity."
+	desc = "A practically brand new sword type with a straight, slender and sharply pointed blade meant to be wielded in one hand. Originating as an unorthodox weapon in Valoria, its name comes from the term \"spada ropera\" (Literally \"dress sword\") due to its primary function being that of an accessory. A very young type of fighting technique for this weapon is emerging in its homeland, aptly named \"Destreza\" for dexterity."
 	icon = 'icons/roguetown/weapons/swords64.dmi'
 	icon_state = "rapier"
 	sheathe_icon = "rapier"
@@ -1680,7 +1671,7 @@
 
 /obj/item/rogueweapon/sword/rapier/silver
 	name = "silver rapier"
-	desc = "A basket-hilted rapier, fitted with a thin blade of pure silver. Immortalized by Rockhill's witch hunters, this weapon - though cumberstone in an untrained hand - is surprisingly adept at both parrying and riposting."
+	desc = "A basket-hilted rapier, fitted with a thin blade of pure silver. Immortalized by witch hunters, this weapon -- though cumberstone in an untrained hand -- is surprisingly adept at both parrying and riposting."
 	icon_state = "silverrapier"
 	sheathe_icon = "psyrapier"
 	max_integrity = 225
@@ -1766,9 +1757,7 @@
 
 /obj/item/rogueweapon/sword/rapier/lord
 	name = "sword of the Mad Duke"
-	desc = "A royal heirloom whose spiraling basket hilt is inlaid with fine cut gems. It bears the burnish of \
-	time, where once sharply defined features have been worn down by so many hands. An old rumor ties this implement \
-	to the siege that smashed the Mad Duke's keep to rubble, and burnt the Duke himself to cinders."
+	desc = "A royal heirloom whose spiraling basket hilt is inlaid with fine cut gems. It bears the burnish of time, where once sharply defined features have been worn down by so many hands. An old rumor ties this implement to the siege that smashed the Mad Duke's keep to rubble, and burnt the Duke himself to cinders."
 	icon_state = "lordrap"
 	sheathe_icon = "lordrapier"
 	sellprice = 150
@@ -1778,7 +1767,7 @@
 
 /obj/item/rogueweapon/sword/rapier/eora
 	name = "\"Heartstring\""
-	desc = "A specialty-made bilbo hilt rapier made in service to Lady Eora. For the time when soft words can no longer be spoken, and hearts are to be pierced."
+	desc = "A specialty-made bilbo hilt rapier made in service to Lady Eora. For the times when soft words can no longer be spoken, and hearts are to be pierced."
 	icon = 'icons/roguetown/weapons/swords32.dmi'
 	icon_state = "eorarapier"
 	sheathe_icon = "eorarapier"
@@ -2326,7 +2315,7 @@
 
 /obj/item/rogueweapon/sword/gold
 	name = "golden arming sword"
-	desc = "A heavenly arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. This particular weapon seems to have innovatively combined the lethal cutting prowess of Beowricke's oldest weapon with the psychological damage of knowing that its wielder could likely bribe the Carriageman himself, and still chose to personally kill you."
+	desc = "A heavenly arming sword, whose golden blade and besilked handle lays separated by a duocruciformic crossguard. This particular weapon seems to have innovatively combined the lethal cutting prowess of Beowricke's oldest weapon with the psychological damage of knowing that its wielder could likely bribe the Carriageman himself, and still chose to personally kill you."
 	icon_state = "goldsword"
 	smeltresult = /obj/item/ingot/gold
 	force = 35
@@ -2342,7 +2331,7 @@
 
 /obj/item/rogueweapon/sword/gold/lordscepter
 	name = "\"Godshand\""
-	desc = "A royal arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. Nestled within its glistening bosom is a shard of Astrata's divinity authority; when reason fails to rank amongst rage, let Her speak for you. ‎</br>‎‎ </br>'..And I will strike down upon thee with great vengeance and furious anger - those who would attempt to poison and destroy my brothers. And you will know that I am the Lord when I lay my vengeance upon thee!'"
+	desc = "A royal arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. Nestled within its glistening bosom is a shard of Astrata's divine authority; when reason fails to rank amongst rage, let Her speak for you. ‎</br>‎‎ </br>'..And I will strike down upon thee with great vengeance and furious anger - those who would attempt to poison and destroy my brothers. And you will know that I am the Lord when I lay my vengeance upon thee!'"
 	icon_state = "goldswordking"
 	sheathe_icon = "goldswordking"
 	anvilrepair = /datum/skill/craft/weaponsmithing
