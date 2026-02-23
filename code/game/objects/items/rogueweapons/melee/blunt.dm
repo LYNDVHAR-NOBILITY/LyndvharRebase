@@ -162,7 +162,7 @@
 
 /obj/item/rogueweapon/mace/alloy
 	name = "decrepit mace"
-	desc = "Frayed bronze, perched atop a rotwooden shaft. His sacrifice had drowned Old Syon, and - in its wake - left Man bereft of all it had accomplished. With all other prayers falling upon deaf ears, Man had crafted this idol in tribute to its new God; violence."
+	desc = "Frayed bronze, perched atop a rotwooden shaft. The metal of this implement was never intended to build homes, or grow food, or warm a cold body. This was only intended to create corpses."
 	icon_state = "amace"
 	force = 17
 	force_wielded = 21
@@ -774,7 +774,7 @@
 
 /obj/item/rogueweapon/mace/warhammer/bronze/decorated
 	name = "decorated bronze warclub"
-	desc = "Flowers, silk, and gold caress this carved-and-spiked log; a honored totem who's roots trace back to the daes before Syon's impact. Myths speak of ancient elve-and-humen alike, wielding such bronzen bludgeons against the Archdevil's rampaging hordes."
+	desc = "Flowers, silk, and gold caress this carved-and-spiked log; an honored totem whose roots trace back to the daes before history, but clearly not culture."
 	icon_state = "bronzeclubdec"
 	smeltresult = /obj/item/ingot/gold
 	sellprice = 100

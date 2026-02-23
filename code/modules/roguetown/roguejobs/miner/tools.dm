@@ -90,7 +90,7 @@
 
 /obj/item/rogueweapon/pick/paalloy
 	name = "ancient pick"
-	desc = "A chisel of polished gilbranze, unfettered in its pursuit of piercing the pebbled paunch of Psydonia. Don't dig too deep, now."
+	desc = "A chisel of polished gilbranze, unfettered in its pursuit of piercing the pebbled paunch of Beowricke. Don't dig too deep, now."
 	force = 18
 	force_wielded = 23
 	icon_state = "apick"

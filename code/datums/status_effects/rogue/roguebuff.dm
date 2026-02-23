@@ -880,8 +880,8 @@
 	icon_state = "buff"
 
 /atom/movable/screen/alert/status_effect/buff/censerbuff
-	name = "Inspired by SYON."
-	desc = "The shard of the great comet had inspired me to ENDURE."
+	name = "Inspired by reliquary."
+	desc = "The Golgoltha reliquary has inspired me to ENDURE."
 	icon_state = "censerbuff"
 
 /datum/status_effect/buff/fortify //Increases all healing while it lasts.
@@ -1920,7 +1920,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/ravox_vow
 	name = "Ravox vow"
-	desc = "I vowed to Ravox. I shall bring justice to Psydonia."
+	desc = "I vowed to Ravox. I shall bring justice to Beowricke."
 
 #define JOYBRINGER_FILTER "joybringer"
 

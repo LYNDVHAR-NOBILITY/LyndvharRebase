@@ -195,7 +195,7 @@
 
 /obj/item/rogueweapon/stoneaxe/woodcut/aaxe
 	name = "decrepit axe"
-	desc = "A hatchet of frayed bronze. It reigns from a tyme before the Comet Syon's impact; when Man wrought metal not to spill blood, but to better shape the world in His image."
+	desc = "A hatchet of frayed bronze. Before history, implements like these cleared the lands of untamed wilds and forged the future."
 	icon_state = "ahandaxe"
 	force = 17
 	force_wielded = 20
@@ -316,7 +316,7 @@
 /obj/item/rogueweapon/stoneaxe/woodcut/bronze
 	name = "bronze axe"
 	icon_state = "bronzeaxe"
-	desc = "An antiquital handstaff, fitted with a bronze axhead. Such a tool once allowed humenity to carve civilization out of Psydonia's wildernesses; now, it's a rare sight beyond the Deadland's nomadic barbarian-tribes."
+	desc = "An antiquital handstaff, fitted with a bronze axhead. Such a tool once allowed humenity to carve civilization out of Beowricke's wildernesses; now, it's a rare sight beyond the Deadland's nomadic barbarian-tribes."
 	force = 23 //Basic balance idea. Damage's between iron and steel, but with a sharper edge than steel. Probably not historically accurate, but we're here to have fun.
 	force_wielded = 27
 	max_blade_int = 550

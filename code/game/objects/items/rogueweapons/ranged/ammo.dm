@@ -835,7 +835,7 @@
 
 /obj/item/ammo_casing/caseless/rogue/javelin/aalloy
 	name = "decrepit javelin"
-	desc = "A missile of frayed bronze. Before you is your weapon; that which rose Man out of the mud, and brought the Beasts of Old Syon to heel. When were you last aware of any other part of you? Do you recall seeing the world in any other way?"
+	desc = "A missile of frayed bronze. Before you is your weapon; that which rose Man out of the mud, and brought the Beasts of the Old Untamed Wilds to heel. When were you last aware of any other part of you? Do you recall seeing the world in any other way?"
 	icon_state = "ajavelin"
 	throwforce = 20
 	force = 10
@@ -869,7 +869,7 @@
 
 /obj/item/ammo_casing/caseless/rogue/javelin/steel/paalloy
 	name = "ancient javelin"
-	desc = "A missile of polished gilbranze. Old Syon had drowned beneath His tears, and Her ascension had brought forth this world's end - so that You, with the killing blow, could become God."
+	desc = "A missile of polished-yet-patinaed gilbronze. Cast this one forth, and watch your brothers-in-arms cast theirs. Obliterate them -- or at least their spirit -- before they meet you face to face."
 	icon_state = "ajavelin"
 	smeltresult = null // 1 Ingots = 2 Javelins
 

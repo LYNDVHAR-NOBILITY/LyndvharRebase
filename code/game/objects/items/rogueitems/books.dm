@@ -169,7 +169,7 @@
 
 /obj/item/book/rogue/bibble
 	name = "The Verses and Acts of the Ten"
-	desc = "The collected verses and acts of the DIVINE PANTHEON. Split into three parts.</br>VISAGE - The OLD, THE FIRST ACTS OF THE TEN UPON PSYDONIA, BEFORE THE COMET SYON </br>DECANOMICON - THE ERA OF GLEAM, THE HOLY CELESTIAL EMPIRE - </br>NEW DAWN - Modern Era, the foundation of the HOLY SEE and ONWARDS."
+	desc = "The collected verses and acts of the DIVINE PANTHEON. Split into three parts.</br>VISAGE - The OLD, THE FIRST ACTS OF THE TEN UPON BEOWRICKE</br>DECANOMICON - THE ERA OF GILD, THE FIRST EMPIRES - </br>NEW DAWN - Modern Era, the foundation of the MOTHER CHURCH and ONWARDS."
 	icon_state = "bibble_0"
 	base_icon_state = "bibble"
 	title = "The Verses and Acts of the Ten"

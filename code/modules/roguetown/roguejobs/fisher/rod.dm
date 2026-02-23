@@ -156,7 +156,7 @@
 
 /obj/item/fishingrod/aalloy
 	name = "decrepit fishing rod"
-	desc = "The Comet Syon's impact drowned the world, long ago. The waves've long since receded, but His greatest works remain shrouded far beneath the sea."
+	desc = "Many things have been cast into the sea, over history... and before it. How many things has this rod fished up, over it's decades and decades of service?"
 	icon_state = "arod"
 	color = "#bb9696"
 	sellprice = 15

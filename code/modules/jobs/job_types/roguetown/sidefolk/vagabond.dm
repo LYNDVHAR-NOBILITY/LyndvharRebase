@@ -20,7 +20,7 @@
 
 	advclass_cat_rolls = list(CTAG_VAGABOND = 20)
 
-	tutorial = "Dozens of people end up down on their luck in the kingdom of Psydonia every day. They sometimes make something of themselves but much more often die in the streets."
+	tutorial = "Dozens of people end up down on their luck in the kingdom of Beowricke every day. They sometimes make something of themselves but much more often die in the streets."
 
 	outfit = /datum/outfit/job/roguetown/vagabond
 	display_order = JDO_VAGABOND

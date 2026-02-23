@@ -1137,7 +1137,7 @@
 
 /obj/item/rogueweapon/greatsword/grenz/flamberge
 	name = "steel flamberge"
-	desc = "A close resemblance of the Grenzelhoftian \"zweihander\", favored by Valorian nobility. The name comes from its unique, flame-shaped blade; a labor only surmountable by Psydonia's finest weaponsmiths."
+	desc = "A close resemblance of the Grenzelhoftian \"zweihander\", favored by Valorian nobility. The name comes from its unique, flame-shaped blade; a labor only surmountable by Beowricke's finest weaponsmiths."
 	icon_state = "steelflamberge"
 	max_blade_int = 180
 	max_integrity = 130

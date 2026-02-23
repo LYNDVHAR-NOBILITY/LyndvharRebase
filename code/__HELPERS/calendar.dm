@@ -37,7 +37,6 @@
 
 // Returns the current IC time as a string in the format [DAYS] ᛉ HH:MM ([Time Of Day])
 /proc/get_current_ic_time_as_string()
-	// Credit to Zydras for Syon's Dae for Saturday
 	// These are the day names that can be referred to sensically ICly
 	// By using secular names rather than IRL deity like Thule, Saturn, Tiw (Tyr), it avoids us having to explain a non-existent
 	// Norse deity while remaining phonetically close to the original English name 

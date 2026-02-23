@@ -14,7 +14,7 @@
 /*	.................   Hardtack   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/crackerscooked
 	name = "hardtack"
-	desc = "Brittle and hard, like chewing on a rock. These salted biscuits will never expire, however: and for those who travel across Psydonia, that fact alone earns it a space in their packs."
+	desc = "Brittle and hard, like chewing on a rock. These salted biscuits will never expire, however: and for those who travel across Beowricke, that fact alone earns it a space in their packs."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
 	icon_state = "tack6"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
@@ -41,7 +41,7 @@
 /*	.................   Bread   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/bread
 	name = "bread loaf"
-	desc = "One of Psydonia's staple foodstuffs, made from leavened dough. From the pauper to the papal, none can deny the simplistic beauty of a freshly-baked loaf."
+	desc = "One of Beowricke's staple foodstuffs, made from leavened dough. From the pauper to the papal, none can deny the simplistic beauty of a freshly-baked loaf."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
 	icon_state = "loaf6"
 	slices_num = 6
