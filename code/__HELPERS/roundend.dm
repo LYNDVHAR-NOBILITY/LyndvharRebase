@@ -138,10 +138,10 @@
 	for(var/client/C in GLOB.clients)
 		if(C.mob)
 			SSdroning.kill_droning(C)
-			if(prob(93))
-				C.mob.playsound_local(C.mob, 'sound/music/roundend.ogg', 100, FALSE) //Unknown. Original narration given by Leslie Nielsen in 'National Geographic: Dive To The Edge Of Creation', circa 1979.
+			if(prob(99))
+				C.mob.playsound_local(C.mob, 'sound/music/roundend.ogg', 100, FALSE)
 			else
-				C.mob.playsound_local(C.mob, 'sound/music/roundend_mirthful.ogg', 100, FALSE) //Hildegard Von Blingin and Whitney Avalon's transformative cover of 'Manchild' by Sabrina Carpenter, circa 2026.
+				C.mob.playsound_local(C.mob, 'sound/music/roundend.ogg', 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
