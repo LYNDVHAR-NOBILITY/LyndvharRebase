@@ -7272,6 +7272,7 @@
 	pixel_x = 7;
 	pixel_y = -8
 	},
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town/tavern)
 "cgP" = (
@@ -19509,7 +19510,6 @@
 	pixel_y = 5
 	},
 /obj/item/storage/roguebag,
-/obj/item/reagent_containers/glass/crucible,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/dwarfin)
 "fSf" = (
@@ -52038,6 +52038,9 @@
 /obj/item/reagent_containers/glass/cup/ceramic/fancy,
 /obj/item/reagent_containers/glass/cup/ceramic/fancy,
 /obj/item/reagent_containers/glass/cup/ceramic/fancy,
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/silver,
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/silver,
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/silver,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/manor)
 "psv" = (
