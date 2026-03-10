@@ -52,6 +52,7 @@
 					/obj/item/natural/cloth = 1,
 					/obj/item/flashlight/flare/torch = 1,
 					/obj/item/book/spellbook = 1, // Spell resetting is a key identity of good mage
+					/obj/item/chalk = 1,
 					)
 	mask = /obj/item/clothing/mask/rogue/facemask/steel
 	neck = /obj/item/clothing/neck/roguetown/coif/heavypadding

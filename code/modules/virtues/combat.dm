@@ -154,34 +154,11 @@
 	else
 		added_skills = list(list(/datum/skill/combat/crossbows, 1, 6))
 
-
-/datum/virtue/combat/shepherd
-	name = "Capable Shepherd"
-	desc = "Years of protecting my herd from brigands and thieves have taught me how to use the simplest of weapons in self-defense."
-	custom_text = "Guaranteed Journeyman for Staffs & Slings."
-	added_stashed_items = list("Iron Quarterstaff" = /obj/item/rogueweapon/woodstaff/quarterstaff/iron,
-								"Sling" = /obj/item/gun/ballistic/revolver/grenadelauncher/sling,
-								"Pouch of Iron Sling Bullets" = /obj/item/quiver/sling/iron)
-
-/datum/virtue/combat/shepherd/apply_to_human(mob/living/carbon/human/recipient)
-	recipient.adjust_skillrank_up_to(/datum/skill/combat/staves, SKILL_LEVEL_JOURNEYMAN, silent = TRUE)
-	recipient.adjust_skillrank_up_to(/datum/skill/combat/slings, SKILL_LEVEL_JOURNEYMAN, silent = TRUE)
-
-/*/datum/virtue/combat/tavern_brawler
-	name = "Tavern Brawler"
-	desc = "I've never met a problem my fists couldn't solve."
-	added_traits = list(TRAIT_CIVILIZEDBARBARIAN)*/
-
 /datum/virtue/combat/guarded
 	name = "Guarded"
 	desc = "I have long kept my true capabilities and vices a secret. Sometimes being deceptively weak can save one's lyfe."
 	custom_text = "Obfuscates information about you from all sorts of effects, including patron abilities & passives, Assess and other virtues."
 	added_traits = list(TRAIT_DECEIVING_MEEKNESS)
-
-/*/datum/virtue/combat/impervious
-	name = "Impervious"
-	desc = "I've spent years shoring up my weakspots, and have become difficult to wound with critical blows."
-	added_traits = list(TRAIT_CRITICAL_RESISTANCE)*/
 
 /datum/virtue/combat/rotcured
 	name = "Rotcured"
