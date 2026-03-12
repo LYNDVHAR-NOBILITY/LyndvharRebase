@@ -204,7 +204,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/friedegg/hammerhold
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_AVERAGE)
 	tastes = list("fried egg" = 1, "sausage" = 1, "bacon" = 1, "toast" = 1)
-	name = "Hammerholdian breakfast"
+	name = "True Dwarven breakfast"
 	desc = "A classic of the northern fortresses, peeled of it's more exotic ingredients for Lyndhardtian kitchens, a true staple of Dwarven diet."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_egg.dmi'
 	icon_state = "hammerbreak"

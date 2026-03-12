@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/gravity // to do: get scroll icon
 	name = "Gravity"
-	desc = "Weighten space around someone, crushing them and knocking them to the floor. Stronger opponents will resist and be off-balanced. Consumes <b>Arcane Marks</b> to slightly increase knockdown time and damage."
+	desc = "A crushing spell that attempts to weigh down one's target, crushing them and knocking them to the floor. Stronger opponents will resist all effects of the spell , taking less damage and becoming off-balanced instead of fully knocked over. Consumes <b>Arcane Marks</b> to slightly increase knockdown time and damage."
 	cost = 3
 	overlay_state = "hierophant"
 	xp_gain = TRUE
@@ -23,7 +23,7 @@
 	human_req = TRUE // Combat spell
 	range = 7
 	var/delay = 5
-	var/damage = 0 // damage based off your str
+	var/damage = 0 // damage based off their str
 	var/area_of_effect = 0
 	var/extra_time = 0
 
@@ -66,7 +66,7 @@
 			else
 				L.OffBalance(10+(extra_time))
 				L.adjustBruteLoss(15)
-				to_chat(L, "<span class='userdanger'>I'm magically weighed down, but my strength resist!</span>")
+				to_chat(L, "<span class='userdanger'>I'm magically weighed down, but my strength resists!</span>")
 	return TRUE
 
 /obj/effect/temp_visual/gravity

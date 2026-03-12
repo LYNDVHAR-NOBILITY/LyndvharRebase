@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/projectile/arcynebolt
 	name = "Arcyne Bolt"
-	desc = "Shoot out a rapid bolt of arcyne magic. Inflicts blunt damage, and applies one stack of Arcane Mark on the target. At three marks, it instead does piercing damage and consumes all marks. Damage is increased by 50% versus simple-minded creechurs.\n\
+	desc = "Shoot out a rapid bolt of arcyne magic. Inflicts blunt damage, and applies one stack of Arcane Mark on the target. At three marks, it instead does a stabbing bolt that deals more damage and pierces armor in exchange for consuming all marks. Damage is increased by 50% versus simple-minded creechurs.\n\
 	Can be fired in an arc over an ally's head with a mage's staff or spellbook on arc intent, but at 25% less damage."
 	clothes_req = FALSE
 	range = 12

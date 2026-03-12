@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/self/magicians_brick
 	name = "Magician's Brick"
-	desc = "Conjure a magical brick in your hand. Its power scale up to your Intelligence\n\
+	desc = "Conjure a magical brick in your hand. Its power scales slightly with one's Intelligence\n\
 	The brick lasts until a new one is summoned or the spell is forgotten. This spell has been honed over centuries to bypass anti-magic defenses."
 	overlay_state = "magicians_brick"
 	sound = list('sound/magic/whiteflame.ogg')

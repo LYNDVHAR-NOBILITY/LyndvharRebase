@@ -130,7 +130,7 @@ GLOBAL_VAR(king_throne)
 
 /obj/structure/roguethrone/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("<b>Throat Commands</b> (say these at the Throat of Azure Peak):")
+	. += span_info("<b>Throat Commands</b> (say these at the Throat of Lyndvhar):")
 	. += span_info("'Make Announcement' - broadcast a message (requires crown)")
 	. += span_info("'Make Decree' - issue a royal decree (requires crown, ruler only)")
 	. += span_info("'Purge Decrees' - remove all decrees (requires crown, ruler only)")

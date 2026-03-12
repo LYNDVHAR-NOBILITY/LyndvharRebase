@@ -82,7 +82,7 @@
 
 /datum/virtue/combat/shielder
 	name = "Traditionalist"
-	desc = "I have trained extensively in both sword and shield, the most illustrious combination of attack and defence. I have one of each hidden away."
+	desc = "I have trained extensively in both sword and shield: the most illustrious combination of attack and defence. I have one of each hidden away."
 	custom_text = "Guaranteed Journeyman for Swords & Shields."
 	added_stashed_items = list("Shield" = /obj/item/rogueweapon/shield/wood,
 								"Arming Sword" = /obj/item/rogueweapon/sword/iron)
@@ -126,7 +126,7 @@
 
 
 /datum/virtue/combat/bowman
-	name = "Toxophilite"
+	name = "Bowman"
 	desc = "I've had an interest in archery from a young age, and I always keep a spare bow and quiver around."
 	custom_text = "+1 to Bows, Up to Legendary, Minimum Apprentice"
 	added_stashed_items = list("Recurve Bow" = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve,
@@ -142,7 +142,7 @@
 
 /datum/virtue/combat/crossbowman
 	name = "Marksman"
-	desc = "Warfare is changing, and the crossbow is the next pedestal. I have always been ahead of the curve, as compared to my peers."
+	desc = "The crossbow is a tool that is simple to pick up and use. I've used it more than just that, though, and it shows."
 	custom_text = "+1 to Crossbows, Up to Legendary, Minimum Apprentice"
 	added_stashed_items = list(
 		"Quiver (Bolts)" = /obj/item/quiver/bolt/standard
@@ -156,8 +156,8 @@
 
 
 /datum/virtue/combat/shepherd
-	name = "Capable Shepherd"
-	desc = "Years of protecting my herd from brigands and thieves have taught me how to use the simplest of weapons in self-defense."
+	name = "Capable Slinger"
+	desc = "Years of idly whipping stones and swinging sticks have shown results. More results than just a yelling at for breaking something, at least."
 	custom_text = "Guaranteed Journeyman for Staffs & Slings."
 	added_stashed_items = list("Iron Quarterstaff" = /obj/item/rogueweapon/woodstaff/quarterstaff/iron,
 								"Sling" = /obj/item/gun/ballistic/revolver/grenadelauncher/sling,
@@ -195,17 +195,17 @@
 
 /datum/virtue/combat/dualwielder
 	name = "Dual Wielder"
-	desc = "Whether in battle with enemies abroad or within, my skills with both hands have excelled. I've been graced with the knowledge of how to wield two weapons at once."
+	desc = "I've been graced with the knowledge of how to wield two weapons at once."
 	added_traits = list(TRAIT_DUALWIELDER)
 
 /datum/virtue/combat/sharp
 	name = "Sentinel of Wits"
-	desc = "Whether it's by having an annoying sibling that kept prodding me with a stick, or years of study and observation, I've become adept at both parrying and dodging stronger opponents, by learning their moves and studying them."
+	desc = "Whether it's by having an annoying sibling that kept prodding me with a stick, or years of study and observation, I've become adept at both parrying and dodging stronger opponents by learning their moves and studying them."
 	added_traits = list(TRAIT_SENTINELOFWITS)
 
 /datum/virtue/combat/combat_aware
 	name = "Combat Aware"
-	desc = "The opponent's flick of their wrist. The sound of maille snapping. The desperate breath as the opponent's stamina wanes. All of this is made more clear to you through intuition or experience."
+	desc = "The opponent's flick of their wrist. The sound of maille snapping. The sound of a desperate breath as the opponent's stamina wanes. All of this is made more clear to you through intuition or experience."
 	custom_text = "Shows a lot more combat information via floating text. Has a toggle."
 	added_traits = list(TRAIT_COMBAT_AWARE)
 

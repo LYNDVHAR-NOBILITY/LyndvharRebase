@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/projectile/arcynestrike
 	name = "Arcyne Smite"
-	desc = "Imbue your held weapon with latent arcyne energy before striking the ignorant!"
+	desc = "Imbue your held weapon with latent arcyne energy, projecting its strike a short range."
 	overlay_state = "conjure_weapon"
 	range = 3
 	projectile_type = /obj/projectile/energy/arcynestrike
