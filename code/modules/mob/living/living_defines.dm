@@ -216,3 +216,11 @@
 	var/strugglecount = 0
 	/// Timer reference for struggle decay
 	var/struggle_decay_timer = null
+
+	var/is_swimming = FALSE
+	var/is_underwater = FALSE
+	var/drowning_drowniness = 0
+	var/breath_remaining = 100
+	var/max_breath = 100
+	var/last_breath_spent = 0
+	var/client/swimming_filter_client = null

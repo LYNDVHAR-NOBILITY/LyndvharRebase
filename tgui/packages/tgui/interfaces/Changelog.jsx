@@ -184,7 +184,7 @@ export class Changelog extends Component {
 
     const header = (
       <Section>
-        <h1>Azure Peak</h1>
+        <h1>Lyndvhar</h1>
         <p>
           <b>Thanks to: </b>
           TGStation, Baystation 12, /vg/station, NTstation, CDK Station devs,
@@ -194,16 +194,16 @@ export class Changelog extends Component {
         </p>
         <p>
           {'Current organization members can be found '}
-          <a href="https://github.com/orgs/Azure-Peak/people">here</a>
+          <a href="https://github.com/orgs/LYNDVHAR-NOBILITY/people">here</a>
           {', recent GitHub contributors can be found '}
-          <a href="https://github.com/Azure-Peak/Azure-Peak/pulse">
+          <a href="https://github.com/LYNDVHAR-NOBILITY/LyndvharRebase/pulse">
             here
           </a>
           .
         </p>
         <p>
           {'You can also join our discord '}
-          <a href="https://discord.gg/NCFXUAgCPT">here</a>.
+          <a href="https://discord.gg/B8zPd2SEx3">here</a>.
         </p>
         {dateDropdown}
       </Section>

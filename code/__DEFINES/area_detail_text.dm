@@ -17,7 +17,7 @@
 // Hotsprings
 #define DETAIL_TEXT_EORAN_SHRINE "An Eoran shrine, nestled high in the mountains, hidden away from well-trodden paths. Cherry blossom, a symbol of both love and the fleeting nature of lyfe in this world, are planted and maintained here by Eoran devotees.\n\
 	Oddly, the trees here seem to bloom year-round."
-#define DETAIL_TEXT_ABANDONED_HOT_SPRINGS ""
+#define DETAIL_TEXT_ABANDONED_HOT_SPRINGS "A pit of silken webs, nestled deep within the bog. The love that once bloomed here has curdled into venom, and stranger things now bud and scuttle through the water."
 
 // Draguipe Forest
 #define DETAIL_TEXT_DRAGUIPPE_FOREST "The Draguippe is the coined name for the large and imposing forest that envelops most of this region of the Dunargi province. Well known for its rough terrain, valleys, and dense vegetation, it is a very dangerous location for the unprepared traveller to venture through, especially in these times."

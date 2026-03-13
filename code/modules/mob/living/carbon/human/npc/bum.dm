@@ -24,7 +24,7 @@ GLOBAL_LIST_INIT(bum_aggro, world.file2list("strings/rt/bumaggrolines.txt"))
 		aggressive=1
 		wander = TRUE
 		if(target != newtarg)
-			say(pick(GLOB.bum_aggro))
+			say(pick(GLOB.bum_aggro), npc_speech = TRUE)
 			pointed(target)
 
 
@@ -124,10 +124,9 @@ GLOBAL_LIST_INIT(bum_aggro, world.file2list("strings/rt/bumaggrolines.txt"))
 			face_atom(get_step(src,pick(GLOB.cardinals)))
 	if(!wander && prob(10))
 		face_atom(get_step(src,pick(GLOB.cardinals)))
-
-	if(prob(10))
-		say(pick(GLOB.bum_quotes))
-	if(prob(10))
+	if(prob(3))
+		say(pick(GLOB.bum_quotes), npc_speech = TRUE)
+	if(prob(3))
 		emote(pick("laugh","burp","yawn","grumble","mumble","blink_r","clap"))
 
 /mob/living/carbon/human/species/human/northern/bum/handle_combat()
