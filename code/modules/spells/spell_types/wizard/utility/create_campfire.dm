@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/create_campfire
 	name = "Create Campfire"
-	desc = "Creates a magical campfire to cook on. 3 tiles range. Lasts for 10 minutes."
+	desc = "Creates a magical campfire to cook on or warm oneself by. 3 tiles range. Lasts for 10 minutes."
 	overlay_state = "create_campfire"
 	sound = list('sound/magic/whiteflame.ogg')
 

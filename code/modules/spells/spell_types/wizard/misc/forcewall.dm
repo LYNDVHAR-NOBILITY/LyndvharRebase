@@ -1,7 +1,7 @@
 //forcewall
 /obj/effect/proc_holder/spell/invoked/forcewall
 	name = "Forcewall"
-	desc = "Conjure a 3x1 wall of arcyne force, preventing anyone and anything other than you from moving through it."
+	desc = "Conjure a 3x1 wall of arcyne force, preventing anyone and anything other than you from moving through it. Though, it is not invincible."
 	school = "transmutation"
 	releasedrain = 30
 	chargedrain = 1

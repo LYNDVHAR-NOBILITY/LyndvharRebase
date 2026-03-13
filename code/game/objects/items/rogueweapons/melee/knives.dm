@@ -757,8 +757,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -6,"nx" = 4,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = 2,"ey" = -6,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy
-	name = "silver-tipped otavan stake"
-	desc = "A branch that has been broken off of an Otavan boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
+	name = "silver-tipped valorian stake"
+	desc = "A branch that has been broken off of an valorian boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
 
 /obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/ComponentInitialize()
 	AddComponent(\

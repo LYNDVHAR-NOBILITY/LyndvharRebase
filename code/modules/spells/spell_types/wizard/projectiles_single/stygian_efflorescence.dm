@@ -3,7 +3,7 @@
 
 /obj/effect/proc_holder/spell/invoked/projectile/stygian
 	name = "Stygian Efflorescence"
-	desc = "Burst forth a triad of sharpened onyxian shards, cut from Mount Golgotha herself. Strips away a fully-stacked Arcane Mark to knock an enemy back and slow them down."
+	desc = "Burst forth a triad of sharpened onyxian shards. Strips away a fully-stacked Arcane Mark to knock an enemy back and slow them down."
 	range = 7 //no reason to not
 	projectile_type = /obj/projectile/energy/stygian
 	projectiles_per_fire = 3
@@ -18,7 +18,7 @@
 	no_early_release = TRUE
 	movement_interrupt = FALSE
 	spell_tier = 2
-	invocations = list("Golgotha shraptae!")
+	invocations = list("Onyx shraptae!")
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_METAL
 	glow_intensity = GLOW_INTENSITY_LOW

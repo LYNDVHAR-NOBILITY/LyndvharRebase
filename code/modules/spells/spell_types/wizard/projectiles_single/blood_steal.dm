@@ -1,7 +1,7 @@
 // Lich / Vampire shared list only
 /obj/effect/proc_holder/spell/invoked/projectile/bloodsteal
 	name = "Blood Steal"
-	desc = "Steal anothers blood for your own collection."
+	desc = "Shoot a beam of blood that damages and steals the target's vitae."
 	clothes_req = FALSE
 	overlay_state = "bloodsteal"
 	sound = 'sound/magic/vlightning.ogg'

@@ -1,7 +1,6 @@
 /obj/effect/proc_holder/spell/self/conjure_armor/dragonhide
 	name = "Conjure Dragonhide"
-	desc = "Conjure a Dragonhide Barrier. Granting long-lasting protection from attacks and an especial affinity against flames. Your armor slot must be free to use this.\n\
-	The barrier lasts until it is broken, a new one is summoned, or the spell is forgotten."
+	desc = "Conjure an ashen dragonhide to protect one's body from attacks and to completely nullify a flame's touch. Requires access to one's skin, about where armor lays on the body."
 	overlay_state = "conjure_dragonhide"
 	sound = list('sound/magic/whiteflame.ogg')
 
@@ -18,7 +17,7 @@
 	cost = 4 // upgrade on ring, + firestack immunity pretty dang good.
 	spell_tier = 2
 
-	invocations = list("Equitare Draconis") // google translate latin 'ride the dragon' - If someone literate wants to change this, feel free to.
+	invocations = list("Propugnaculum Ignis") // should just be fire protection/defense or whatever
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_METAL
 	glow_intensity = GLOW_INTENSITY_MEDIUM
@@ -40,7 +39,7 @@
 
 /obj/item/clothing/suit/roguetown/dragonhide
 	name = "dragonhide"
-	desc = "An arcyne art first mastered by the 'dragonsbreath dracanae' of Calmirixia. This barrier protects best against the heat."
+	desc = "A layer of ashy scales. As they fall off, they are replaced anew. This constant cycling proves extremely efficient in keeping the wearer completely free of flames engulfing them."
 	max_integrity = 200
 	break_sound = 'sound/foley/breaksound.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -103,7 +102,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/dragonhide
 	name = "Dragonhide"
-	desc = "Flames dance at my heels, yet do not sting!"
+	desc = "Ashy scales cover me in a protective layer. I am safe from fire."
 
 /datum/status_effect/buff/dragonhide/on_apply()
 	. = ..()

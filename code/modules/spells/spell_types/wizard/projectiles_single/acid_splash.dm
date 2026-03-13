@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/projectile/acidsplash
 	name = "Acid Splash"
-	desc = "A slow-moving glob of acid that sprays over an area upon impact."
+	desc = "Fire a slow-moving glob of acid that splashes over the target and the surrounding area upon impact. Deals damage on impact, and over time."
 	range = 8
 	projectile_type = /obj/projectile/magic/acidsplash
 	overlay_state = "acid_splash"

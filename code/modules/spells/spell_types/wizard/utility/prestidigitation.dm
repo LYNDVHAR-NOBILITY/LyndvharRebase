@@ -5,7 +5,7 @@
 
 /obj/effect/proc_holder/spell/targeted/touch/prestidigitation
 	name = "Prestidigitation"
-	desc = "A few basic tricks many apprentices use to practice basic manipulation of the arcyne."
+	desc = "A spell that forms the foundation of most mage's grasp of the arcyne. Can be used for simple household tasks, like cleaning, creating firestarting sparks, or conjuring a light."
 	clothes_req = FALSE
 	drawmessage = "I prepare to perform a minor arcyne incantation."
 	dropmessage = "I release my minor arcyne focus."

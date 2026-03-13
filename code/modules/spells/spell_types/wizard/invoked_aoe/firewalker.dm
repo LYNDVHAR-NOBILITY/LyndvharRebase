@@ -1,8 +1,7 @@
 /obj/effect/proc_holder/spell/invoked/firewalker
 	name = "Firewalker"
 	overlay_state = "firewalk"
-	desc = "Watch the fire dance and join the dance together! \n\
-	The ground under your feet will burn!"
+	desc = "Conjure huge swathes of fire centered around oneself for a few seconds. While it is underway, you are slightly slowed."
 	cost = 4
 	xp_gain = TRUE
 	releasedrain = 30

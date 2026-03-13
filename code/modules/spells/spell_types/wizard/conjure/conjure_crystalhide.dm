@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/self/conjure_armor/crystalhide
-	name = "Conjure Crystalhide"
-	desc = "Conjure a Crystalhide Barrier that wraps your whole body in brittle leyline-crystal. Your armor slot must be free to use this. While active, the barrier bolsters your intelligence. When the barrier shatters or is dismissed, it lets out a burst of hot, Signal-cut statick wind."
+	name = "Conjure Crystalline Cover"
+	desc = "Conjure a protective layer of crystals in place of armor. The close proximity to such pure and mesmerizing structures seems to subtly refocus the mind, allowing one to greater wield their intellect. Though such a thing might cause a headache for others in close proximity when it is dispelled by the user or an opponent."
 	overlay_state = "conjure_dragonhide"
 	sound = list('sound/magic/whiteflame.ogg')
 
@@ -16,7 +16,7 @@
 	cost = 4
 	spell_tier = 3
 
-	invocations = list("Psymagia Congrego!") //COLLECT WORLD-LUX/WORLD-LEY.
+	invocations = list("Crystallinum Claritas") //I hate whoever wrote everythign in this dm originally. This should be something stupid like "crystalline clarity" but it's stupid trash translate cause 15000 grammar rules for writing in latin lol
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_ARCANE
 	glow_intensity = GLOW_INTENSITY_MEDIUM
@@ -29,7 +29,7 @@
 
 /obj/item/clothing/suit/roguetown/crystalhide
 	name = "crystalhide"
-	desc = "A shell of translucent arcyne crystal. Shatters violently into Signal-cut static-wind when broken."
+	desc = "A shell of mesmerizing arcyne crystals. Their close proximity causes your mind to refocus."
 	break_sound = 'sound/foley/breaksound.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
 	icon = 'icons/mob/actions/roguespells.dmi'
@@ -97,12 +97,12 @@
 	alert_type = /atom/movable/screen/alert/status_effect/buff/crystalhide
 	duration = -1
 	effectedstats = list(STATKEY_INT = 1)
-	examine_text = "<font color='cyan'>SUBJECTPRONOUN glimmers with brittle arcyne crystal.</font>"
+	examine_text = "<font color='cyan'>SUBJECTPRONOUN glimmers with brittle and eye-catching arcyne crystals.</font>"
 	var/outline_colour = "#3aa8ff"
 
 /atom/movable/screen/alert/status_effect/buff/crystalhide
-	name = "Crystalhide Aggregatemind"
-	desc = "Collection of worldline-static; my mind expandeth. Whispers and suggestions from foreign egos are encoded on the holographic boundary."
+	name = "Crystalhide focus"
+	desc = "The crystal clear focus I have when adorned in this armor is fascinating!"
 
 /datum/status_effect/buff/crystalhide/on_apply()
 	. = ..()

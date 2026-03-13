@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/projectile/fetch
 	name = "Fetch"
-	desc = "Shoot out a magical bolt that draws in the target struck towards the caster."
+	desc = "Shoot out a magical bolt that draws in the struck target towards the caster."
 	clothes_req = FALSE
 	range = 15
 	projectile_type = /obj/projectile/magic/fetch

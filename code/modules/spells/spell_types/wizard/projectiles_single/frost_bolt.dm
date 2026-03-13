@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/projectile/frostbolt // to do: get scroll icon
 	name = "Frost Bolt"
-	desc = "A ray of frozen energy, slowing the first thing it touches and lightly damaging it."
+	desc = "A bolt of freezing energy, slowing the first thing it touches and damaging it."
 	range = 8
 	projectile_type = /obj/projectile/magic/frostbolt
 	overlay_state = "frost_bolt"

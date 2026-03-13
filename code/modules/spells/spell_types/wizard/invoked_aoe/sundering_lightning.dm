@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/sundering_lightning
 	name = "Sundering Lightning"
-	desc = "Summons forth dangerous rapid lightning strikes."
+	desc = "Summons forth dangerous rapid lightning strikes in an area."
 	overlay_state = "lightning_sunder"
 	cost = 9
 	spell_tier = 4 // Highest tier AOE

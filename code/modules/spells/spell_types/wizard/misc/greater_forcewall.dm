@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/forcewall/greater
 	name = "Greater Forcewall"
-	desc = "Conjure a 5x1 wall of arcyne force, preventing anyone and anything other than you from moving through it."
+	desc = "Conjure a 5x1 wall of arcyne force, preventing anyone and anything other than you from moving through it. Though, it is not invincible."
 	overlay_state = "forcewall"
 	spell_tier = 3 // Full Mage only.
 	invocations = list("Murus Maior!") // Make a greater barrier

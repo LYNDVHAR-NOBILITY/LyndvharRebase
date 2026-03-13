@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/meteor_storm
 	name = "Meteor Storm"
-	desc = "Summons forth dangerous meteors from the sky to scatter and smash foes."
+	desc = "Summons forth dangerous meteors from the sky to scatter and smash foes. Has a huge radius where the meteors can land. Expect a lot of fire."
 	overlay_state = "meteor_storm"
 	cost = 9
 	spell_tier = 4 // Highest tier AOE

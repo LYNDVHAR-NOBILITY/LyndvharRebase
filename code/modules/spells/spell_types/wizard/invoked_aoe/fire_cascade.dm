@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/fire_cascade
 	name = "Fire Cascade"
-	desc = "Heats the air around you."
+	desc = "Creates a massive swathe of fire centered on oneself. Has almost no charge time or tell. Does not come with safety equipment."
 	overlay_state = "fireaura"
 	spell_tier = 3
 	cost = 6

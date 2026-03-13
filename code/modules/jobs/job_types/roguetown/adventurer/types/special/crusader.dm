@@ -154,7 +154,7 @@
 	name = "valorian surcoat of the golden order"
 	desc = "A regal surcoat, inlined with golden threading. The stitchwork tethers it to the Golden Orders; a catch-all term for the various faith-militances that \
 	ward Beowricke from heathens, cultists, and the ever-looming threat of another calamity. This variant predates them all - stitched by Valorian seamstresses to adorn \
-	the bods of Rockhill's final crusaders. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
+	the bods of old crusaders. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
 	icon_state = "legacy_crusader_surcoat"
 	icon = 'icons/roguetown/clothing/special/crusader.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
@@ -164,7 +164,7 @@
 	name = "valorian surcoat of the silver order"
 	desc = "A noble surcoat, inlined with silver threading. The stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
 	ward Beowricke from monsters, deadites, and the ever-looming threat of another calamity. This variant predates them all - stitched by Valorian seamstresses to adorn \
-	the bods of Rockhill's final crusaders. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
+	the bods of old crusaders. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
 	icon_state = "legacy_crusader_surcoatt2"
 
 //
