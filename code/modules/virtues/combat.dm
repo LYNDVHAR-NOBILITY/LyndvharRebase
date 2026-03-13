@@ -124,7 +124,6 @@
 	recipient.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, silent = TRUE)
 	recipient.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, silent = TRUE)
 
-
 /datum/virtue/combat/bowman
 	name = "Bowman"
 	desc = "I've had an interest in archery from a young age, and I always keep a spare bow and quiver around."
@@ -139,7 +138,6 @@
 	else
 		added_skills = list(list(/datum/skill/combat/bows, 1, 6))
 
-
 /datum/virtue/combat/crossbowman
 	name = "Marksman"
 	desc = "The crossbow is a tool that is simple to pick up and use. I've used it more than just that, though, and it shows."
@@ -153,19 +151,6 @@
 		recipient.adjust_skillrank_up_to(/datum/skill/combat/crossbows, SKILL_LEVEL_APPRENTICE, silent = TRUE)
 	else
 		added_skills = list(list(/datum/skill/combat/crossbows, 1, 6))
-
-
-/datum/virtue/combat/shepherd
-	name = "Capable Slinger"
-	desc = "Years of idly whipping stones and swinging sticks have shown results. More results than just a yelling at for breaking something, at least."
-	custom_text = "Guaranteed Journeyman for Staffs & Slings."
-	added_stashed_items = list("Iron Quarterstaff" = /obj/item/rogueweapon/woodstaff/quarterstaff/iron,
-								"Sling" = /obj/item/gun/ballistic/revolver/grenadelauncher/sling,
-								"Pouch of Iron Sling Bullets" = /obj/item/quiver/sling/iron)
-
-/datum/virtue/combat/shepherd/apply_to_human(mob/living/carbon/human/recipient)
-	recipient.adjust_skillrank_up_to(/datum/skill/combat/staves, SKILL_LEVEL_JOURNEYMAN, silent = TRUE)
-	recipient.adjust_skillrank_up_to(/datum/skill/combat/slings, SKILL_LEVEL_JOURNEYMAN, silent = TRUE)
 
 /datum/virtue/combat/guarded
 	name = "Guarded"
