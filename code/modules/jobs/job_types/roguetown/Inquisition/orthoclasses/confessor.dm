@@ -49,18 +49,18 @@
 		switch(weapon_choice)
 			if("Psydonic Handmace")
 				l_hand = /obj/item/rogueweapon/mace/cudgel/psy
-				H.adjust_skillrank_up_to(/datum/skill/combat/maces, 3, TRUE)	
+				H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)	
 			if("Psydonic Rapier")
 				l_hand = /obj/item/rogueweapon/sword/rapier/psy
 				r_hand = /obj/item/rogueweapon/scabbard/sword
-				H.adjust_skillrank_up_to(/datum/skill/combat/swords, 3, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 			if("Psydonic Shortsword")
 				l_hand = /obj/item/rogueweapon/sword/short/psy
 				r_hand = /obj/item/rogueweapon/scabbard/sword
-				H.adjust_skillrank_up_to(/datum/skill/combat/swords, 3, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 			if("Psydonic Flanged Mace - Heavy-Balanced")
 				l_hand = /obj/item/rogueweapon/mace/cudgel/psy
-				H.adjust_skillrank_up_to(/datum/skill/combat/maces, 3, TRUE)	
+				H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)	
 		var/armors = list("Confessor - Slurbow, Leather Maillecoat", "Arbalist - Crossbow, Psydonic Chestplate, Pushup Armour")
 		var/armor_choice = input(H, "Choose your ARCHETYPE.", "TAKE UP PSYDON'S DUTY.") as anything in armors
 		switch(armor_choice)
